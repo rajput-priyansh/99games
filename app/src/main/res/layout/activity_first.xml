@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/roadtopro_splash_page"
+    tools:context="com.egamez.org.ui.activities.FirstActivity">
+
+    <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:visibility="gone"
+        android:src="@drawable/road_to_pro_logo"/>-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_splash"/>
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Powered by 99egames"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/black"/>-->
+</RelativeLayout>

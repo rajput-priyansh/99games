@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.egamez.org.ui.activities.WithdrawMoneyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_gravity="center_vertical"
+        android:background="@color/newblue"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+
+        <ImageView
+            android:id="@+id/backfromwithdrawmoney"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/left_aero" />
+
+
+        <com.egamez.org.widget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/withdraw_money"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:fontTextStyle="4" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.egamez.org.widget.CustomTextView
+                android:id="@+id/withdrawtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:text="@string/withdraw_to_"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/newblack"
+                app:fontTextStyle="4" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/numbertil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                app:hintTextColor="@color/newblack">
+
+                <com.egamez.org.widget.CustomEditText
+                    android:id="@+id/paytm_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:fontTextStyle="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                app:hintTextColor="@color/newblack">
+
+                <com.egamez.org.widget.CustomEditText
+                    android:id="@+id/withdraw_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/resize_coin"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/Amount"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:fontTextStyle="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:orientation="horizontal">
+
+                <com.egamez.org.widget.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="@string/withdraw_to"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/newblack"
+                    app:fontTextStyle="3" />
+
+                <RadioGroup
+                    android:id="@+id/withdraw_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <com.egamez.org.widget.CustomTextView
+                android:id="@+id/withdraw_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/newgreen"
+                app:fontTextStyle="3" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true">
+
+                <com.egamez.org.widget.CustomButton
+                    android:id="@+id/withdraw_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/newgreen"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="@string/withdraw_money"
+                    android:textColor="@color/white"
+                    app:fontTextStyle="4" />
+            </androidx.cardview.widget.CardView>
+
+            <com.egamez.org.widget.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:text="@string/you_can_only_withdraw_win_money"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/newblack"
+                app:fontTextStyle="3" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

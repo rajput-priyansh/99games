@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.egamez.org.ui.activities.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <!-- <androidx.viewpager.widget.ViewPager
+                 android:id="@+id/view_pager"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:background="@android:color/transparent" />
+
+             &lt;!&ndash;<com.google.android.material.appbar.AppBarLayout
+                 android:id="@+id/appbar"
+                 android:layout_width="match_parent"
+                 android:layout_height="50dp"
+                 android:layout_below="@id/view_pager"
+                 android:background="@android:color/transparent"
+                 android:backgroundTint="@android:color/transparent"
+                 android:gravity="bottom"
+                 android:visibility="visible">&ndash;&gt;
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tabs"
+                 android:layout_width="match_parent"
+                 android:layout_height="60dp"
+                 android:layout_gravity="bottom"
+                 android:background="@drawable/bottom_nav_bg"
+                 app:layout_anchorGravity="center"
+                 app:tabGravity="fill"
+                 app:tabMode="fixed"
+                 app:tabTextAppearance="@style/CustomTextStyle" />-->
+
+            <!--            </com.google.android.material.appbar.AppBarLayout>-->
+            <fragment
+                android:id="@+id/nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/mobile_navigation" />
+
+            <np.com.susanthapa.curved_bottom_navigation.CurvedBottomNavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                app:cbn_bg="@color/colorPrimary"
+                app:cbn_unSelectedColor="@color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llGameList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/joystick"
+                app:backgroundTint="@color/white"
+                app:fab_icon="@drawable/joystick" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/admob_baner"></com.google.android.gms.ads.AdView>
+
+</LinearLayout>

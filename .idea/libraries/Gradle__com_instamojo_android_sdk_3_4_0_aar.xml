@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Gradle: com.instamojo:android-sdk:3.4.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fa0a136a161a547667868bfcf8fd2004/jetified-android-sdk-3.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fa0a136a161a547667868bfcf8fd2004/jetified-android-sdk-3.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fa0a136a161a547667868bfcf8fd2004/jetified-android-sdk-3.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/091151816573ac948d8b052b05b2a1d8/jetified-android-sdk-3.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/091151816573ac948d8b052b05b2a1d8/jetified-android-sdk-3.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/091151816573ac948d8b052b05b2a1d8/jetified-android-sdk-3.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20770a214b1242a08a1b92cb3f1bb21d/jetified-android-sdk-3.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20770a214b1242a08a1b92cb3f1bb21d/jetified-android-sdk-3.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20770a214b1242a08a1b92cb3f1bb21d/jetified-android-sdk-3.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46696a069b0678ee99ed77d14bff2f6d/jetified-android-sdk-3.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46696a069b0678ee99ed77d14bff2f6d/jetified-android-sdk-3.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46696a069b0678ee99ed77d14bff2f6d/jetified-android-sdk-3.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b41e1e9332cb5826cd5922294cdfbee/jetified-android-sdk-3.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b41e1e9332cb5826cd5922294cdfbee/jetified-android-sdk-3.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b41e1e9332cb5826cd5922294cdfbee/jetified-android-sdk-3.4.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instamojo/android-sdk/3.4.0/940bd0a1a4dcc3a4cfdfec84bc2a767c718cdc8a/android-sdk-3.4.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instamojo/android-sdk/3.4.0/3c0bdcc2a9c499670f1d505280ef02bf3dbd44a6/android-sdk-3.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

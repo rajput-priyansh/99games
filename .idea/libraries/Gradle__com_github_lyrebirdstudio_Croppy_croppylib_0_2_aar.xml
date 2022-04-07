@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.lyrebirdstudio.Croppy:croppylib:0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cc68ebe5d150f6bac7c29ed26c06c2a5/jetified-croppylib-0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cc68ebe5d150f6bac7c29ed26c06c2a5/jetified-croppylib-0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cc68ebe5d150f6bac7c29ed26c06c2a5/jetified-croppylib-0.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff17122415fe1d6211603914967762f0/jetified-croppylib-0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff17122415fe1d6211603914967762f0/jetified-croppylib-0.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff17122415fe1d6211603914967762f0/jetified-croppylib-0.2/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.lyrebirdstudio.Croppy/croppylib/0.2/95c5f89926bb3580029bc5a2f5b2eddea7aef7a5/croppylib-0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

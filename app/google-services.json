@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "801460347740",
+    "project_id": "metaclops-2b782",
+    "storage_bucket": "metaclops-2b782.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801460347740:android:e27ebe2ccf9596e584d799",
+        "android_client_info": {
+          "package_name": "com.egamez.org"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801460347740-ljc04i7b99otpd5oujgs6d219q2sjbgr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2VaCv9eu06e4ntFMX94BpkOYpF0ZJisg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801460347740-ljc04i7b99otpd5oujgs6d219q2sjbgr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

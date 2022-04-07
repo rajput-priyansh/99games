@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_game">
+
+    <fragment
+        android:id="@+id/navigation_earn"
+        android:name="com.egamez.org.ui.fragments.EarnFragment"
+        tools:layout="@layout/earn_home" />
+    <fragment
+        android:id="@+id/navigation_game"
+        android:name="com.egamez.org.ui.fragments.PlayFragment"
+        tools:layout="@layout/play_home" />
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.egamez.org.ui.fragments.MeFragment"
+        tools:layout="@layout/me_home" />
+</navigation>

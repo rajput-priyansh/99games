@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.databinding:databinding-runtime:4.1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a08fadd41d8c6bf01605bc0d0a65a9d/databinding-runtime-4.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a08fadd41d8c6bf01605bc0d0a65a9d/databinding-runtime-4.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a08fadd41d8c6bf01605bc0d0a65a9d/databinding-runtime-4.1.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f454b90b0470d19fa97027bf87245a38/databinding-runtime-4.1.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f454b90b0470d19fa97027bf87245a38/databinding-runtime-4.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f454b90b0470d19fa97027bf87245a38/databinding-runtime-4.1.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-runtime/4.1.1/6a6259641f398863cf980d640264d9c8d5fd9528/databinding-runtime-4.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FontStyle">
+        <attr name="fontTextStyle" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="ScrimInsetsView">
+        <attr name="appInsetForeground" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="NavDrawerItemView">
+        <attr name="iconTints" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ForegroundView">
+        <attr name="foreground" format="color" />
+        <attr name="foregroundInsidePadding" format="boolean" />
+        <attr name="foregroundGravity" format="integer" />
+    </declare-styleable>
+
+</resources>

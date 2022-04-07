@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.lyrebirdstudio.Croppy:aspectratiorecyclerviewlib:0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/947a37a01354474977c712ef4108a360/jetified-aspectratiorecyclerviewlib-0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/947a37a01354474977c712ef4108a360/jetified-aspectratiorecyclerviewlib-0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/947a37a01354474977c712ef4108a360/jetified-aspectratiorecyclerviewlib-0.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a23535aab8750c13e0e790383b681e0/jetified-aspectratiorecyclerviewlib-0.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a23535aab8750c13e0e790383b681e0/jetified-aspectratiorecyclerviewlib-0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a23535aab8750c13e0e790383b681e0/jetified-aspectratiorecyclerviewlib-0.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.lyrebirdstudio.Croppy/aspectratiorecyclerviewlib/0.2/b4532b3c0adaceee9353114b74658236dff1ffd3/aspectratiorecyclerviewlib-0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

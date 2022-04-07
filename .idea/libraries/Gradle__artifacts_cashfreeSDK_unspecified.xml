@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:cashfreeSDK:unspecified">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/cashfreeSDK/build/.transforms/f6b8380c239ffa684b0f6bec1151aae8/jetified-cashfreeSDK/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/cashfreeSDK/build/.transforms/f6b8380c239ffa684b0f6bec1151aae8/jetified-cashfreeSDK/res" />
+      <root url="file://$PROJECT_DIR$/cashfreeSDK/build/.transforms/f6b8380c239ffa684b0f6bec1151aae8/jetified-cashfreeSDK/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

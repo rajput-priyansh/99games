@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Gradle: com.paytm:pgplussdk:1.4.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b9ea0fafccdfa1d81da36d7dcfbd9fd/jetified-pgplussdk-1.4.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b9ea0fafccdfa1d81da36d7dcfbd9fd/jetified-pgplussdk-1.4.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b9ea0fafccdfa1d81da36d7dcfbd9fd/jetified-pgplussdk-1.4.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4bcb145fa3a22ef2d974e6a49bd95999/jetified-pgplussdk-1.4.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4bcb145fa3a22ef2d974e6a49bd95999/jetified-pgplussdk-1.4.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4bcb145fa3a22ef2d974e6a49bd95999/jetified-pgplussdk-1.4.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2addb2c5decad12624a231800c30ccc4/jetified-pgplussdk-1.4.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2addb2c5decad12624a231800c30ccc4/jetified-pgplussdk-1.4.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2addb2c5decad12624a231800c30ccc4/jetified-pgplussdk-1.4.4/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e56a304eb3601ee3f79390a44ec58900/jetified-pgplussdk-1.4.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e56a304eb3601ee3f79390a44ec58900/jetified-pgplussdk-1.4.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e56a304eb3601ee3f79390a44ec58900/jetified-pgplussdk-1.4.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/365ccd9ade0baa786784f3b8c34167d8/jetified-pgplussdk-1.4.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/365ccd9ade0baa786784f3b8c34167d8/jetified-pgplussdk-1.4.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/365ccd9ade0baa786784f3b8c34167d8/jetified-pgplussdk-1.4.4/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.paytm/pgplussdk/1.4.4/54fcb682196d26539aab6a136aa825d1d0d12e7c/pgplussdk-1.4.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.paytm/pgplussdk/1.4.4/6e118481d89eb8eab80a18fa1c55c71c4f882933/pgplussdk-1.4.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

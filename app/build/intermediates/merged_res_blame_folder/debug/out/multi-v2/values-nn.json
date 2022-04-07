@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\android_workspace\\2021\\my_local\\99egamez\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-nn\\values-nn.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-2\\files-2.1\\8ee9a18013293a97a78cbf38643827ff\\jetified-stripe-3ds2-android-2.0.5\\res\\values-nn\\values-nn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,111,163,219,263,338,428,483,538,590,649",
+                        "endColumns": "55,51,55,43,74,89,54,54,51,58,54",
+                        "endOffsets": "106,158,214,258,333,423,478,533,585,644,699"
+                    }
+                }
+            ]
+        }
+    ]
+}
