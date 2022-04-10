@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -29,6 +30,7 @@ public class FriendRequestActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private FriendReqAdapter friendReqAdapter;
     private List<FriendRequest> friendList = new ArrayList<>();
+    private ImageView backImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,12 +42,18 @@ public class FriendRequestActivity extends AppCompatActivity {
     private void initView() {
         searchView= (SearchView) findViewById(R.id.search_view);
         friendsRecyclerView = (RecyclerView) findViewById(R.id.friends_recycler);
+        backImage=(ImageView) findViewById(R.id.backfromselectedgame);
         friendsRecyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         friendsRecyclerView.setLayoutManager(layoutManager);
         friendReqAdapter = new FriendReqAdapter(this,friendList);
         friendsRecyclerView.setAdapter(friendReqAdapter);
-
+        backImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              onBackPressed();
+            }
+        });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
