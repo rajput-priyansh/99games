@@ -20,8 +20,8 @@
 
         <ImageView
             android:id="@+id/backfromselectedgame"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="22dp"
+            android:layout_height="26dp"
             android:layout_gravity="center"
             android:src="@mipmap/left_aero" />
 

@@ -3,6 +3,7 @@ package com.egamez.org.ui.activities;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -23,6 +24,7 @@ public class NotificationActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private NotificationAdapter notificationAdapter;
     private List<String> notificationList = new ArrayList<>();
+    private ImageView backImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +34,20 @@ public class NotificationActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        backImage=(ImageView) findViewById(R.id.backfromselectedgame);
         notificationRecyclerView = (RecyclerView) findViewById(R.id.notification_recycler);
         notificationRecyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         notificationRecyclerView.setLayoutManager(layoutManager);
         notificationAdapter = new NotificationAdapter(this,notificationList);
         notificationRecyclerView.setAdapter(notificationAdapter);
+
+        backImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     @Override

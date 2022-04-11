@@ -441,5 +441,5 @@
     <string name="show_case_4">Tap here to add points in wallet</string>
     <string name="show_case_5">Tap here to withdraw points from wallet</string>
     <string name="join_now_select_time"><![CDATA[JOIN NOW & SELECT TIME]]></string>
-
+    <string name="announcements_text">Announcements</string>
 </resources>

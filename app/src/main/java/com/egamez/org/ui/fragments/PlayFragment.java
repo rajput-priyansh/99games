@@ -35,6 +35,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.egamez.org.models.HowToPlayBean;
 import com.egamez.org.ui.activities.FriendRequestActivity;
+import com.egamez.org.ui.activities.MyProfileActivity;
+import com.egamez.org.ui.activities.MyStatisticsActivity;
 import com.egamez.org.ui.activities.NotificationActivity;
 import com.egamez.org.ui.adapters.AllGamesAdapter;
 import com.egamez.org.ui.adapters.AnnouncementAdapter;
@@ -78,7 +80,7 @@ public class PlayFragment extends Fragment {
     RequestQueue mQueue, dQueue, sQueue;
     TextView balInPlay;
     UserLocalStore userLocalStore;
-    TextView noUpcoming;
+    TextView noUpcoming,usernameText,balanceText;
     LoadingDialog loadingDialog;
     ShimmerFrameLayout shimer;
     CurrentUser user;
@@ -93,9 +95,9 @@ public class PlayFragment extends Fragment {
     TextView announcement, txtTipsAndTricks, txtTournamentTitle;
     CardView announcecv, cvHowToPlay;
     RecyclerView rvYoutubeLinks;
-    ImageView imgCloseYoutubeLinkDialog,friendImage,notificationImage;
+    ImageView imgCloseYoutubeLinkDialog,friendImage,notificationImage,staticsImage;
     RelativeLayout rlTutorialListDialogOverlay;
-
+    LinearLayout profileLayout;
     KKViewPager mPager;
 
     List<BanerData> banerData;
@@ -125,7 +127,8 @@ public class PlayFragment extends Fragment {
 
             }
         });
-
+        usernameText = (TextView) root.findViewById(R.id.username_text);
+        balanceText= (TextView) root.findViewById(R.id.balance_text);
         mPager = (KKViewPager) root.findViewById(R.id.kk_pager);
 
         banerData = new ArrayList<>();
@@ -140,7 +143,14 @@ public class PlayFragment extends Fragment {
         txtTipsAndTricks.setSelected(true);
         txtTournamentTitle.setSelected(true);
         user = userLocalStore.getLoggedInUser();
+        if(user !=null){
+            usernameText.setText("Username:"+user.getUsername());
+            balanceText.setText("Balance:0");
+        }
+        profileLayout = (LinearLayout) root.findViewById(R.id.profile_layout);
         friendImage = (ImageView)root.findViewById(R.id.friend_image);
+        staticsImage = (ImageView)root.findViewById(R.id.statics_image);
+
         notificationImage = (ImageView)root.findViewById(R.id.notification_image);
         allGameRecyclerView = (RecyclerView) root.findViewById(R.id.allgamell_recycler);
         allGameRecyclerView.setHasFixedSize(true);
@@ -167,6 +177,20 @@ public class PlayFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), FriendRequestActivity.class);
+                startActivity(intent);
+            }
+        });
+        staticsImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MyStatisticsActivity.class);
+                startActivity(intent);
+            }
+        });
+        profileLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MyProfileActivity.class);
                 startActivity(intent);
             }
         });

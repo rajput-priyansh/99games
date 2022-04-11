@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/drawable/circle_view.xml" value="0.2518518518518518" />
+        <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/drawable/myprofile.xml" value="0.2518518518518518" />
+        <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/drawable/rounded_corner.xml" value="0.2518518518518518" />
+        <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/drawable/white_round_corner.xml" value="0.2518518518518518" />
+        <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/activity_friend_request.xml" value="0.11778115501519756" />
+        <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/activity_my_profile.xml" value="0.10207700101317123" />
+        <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/allgamedata.xml" value="0.1" />
+        <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/announcement_item.xml" value="0.14114583333333333" />
+        <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/me_home.xml" value="0.10207700101317123" />
+        <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/play_home.xml" value="0.20018115942028986" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

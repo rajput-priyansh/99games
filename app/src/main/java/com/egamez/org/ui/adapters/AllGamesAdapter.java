@@ -33,14 +33,14 @@ public class AllGamesAdapter extends RecyclerView.Adapter<AllGamesAdapter.DataOb
         CardView gamecardview;
         ImageView gamebaner;
         TextView gamename;
-        TextView totalupcomig;
+        TextView matchesText;
         ImageView showcaseimage;
         public DataObjectHolder(View itemView) {
             super(itemView);
              gamecardview = (CardView) itemView.findViewById(R.id.gamecardview);
              gamebaner = (ImageView) itemView.findViewById(R.id.gamebanner);
              gamename = (TextView) itemView.findViewById(R.id.gamename);
-             totalupcomig = (TextView) itemView.findViewById(R.id.matchesavailable);
+             matchesText = (TextView) itemView.findViewById(R.id.matches_text);
              showcaseimage = (ImageView) itemView.findViewById(R.id.showcaseimage);
             Log.i(LOG_TAG, "Adding Listener");
             itemView.setOnClickListener(this);
@@ -77,7 +77,7 @@ public class AllGamesAdapter extends RecyclerView.Adapter<AllGamesAdapter.DataOb
     @Override
     public void onBindViewHolder(DataObjectHolder holder, int position) {
         GameData data = gameDataList.get(position);
-        holder.totalupcomig.setText(mContext.getResources().getString(R.string.match_available_) + data.getTotalUpcoming());
+        holder.matchesText.setText("Matches: " + data.getTotalUpcoming());
 
         new FancyShowCaseQueue()
                 .add(addView(holder.showcaseimage, mContext.getResources().getString(R.string.show_case_1), "1"))

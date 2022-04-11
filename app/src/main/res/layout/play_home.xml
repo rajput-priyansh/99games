@@ -40,7 +40,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:gravity="center"
-            android:background="@drawable/circle_view"
+            android:background="@drawable/white_round_corner"
             android:orientation="vertical">
 
             <ImageView
@@ -53,6 +53,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/aspect_lib_margin_16dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
             <TextView
@@ -212,8 +213,8 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:id="@+id/cvHowToPlay"
-                                    android:layout_width="90dp"
-                                    android:layout_height="90dp"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
                                     android:background="@color/white"
                                     app:cardCornerRadius="5dp"
                                     app:cardUseCompatPadding="true">
@@ -224,8 +225,8 @@
                                         android:orientation="vertical">
 
                                         <ImageView
-                                            android:layout_width="40dp"
-                                            android:layout_height="40dp"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
                                             android:layout_gravity="center_horizontal"
                                             android:layout_margin="5dp"
                                             android:src="@drawable/tutorial" />
@@ -243,8 +244,8 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <androidx.cardview.widget.CardView
-                                    android:layout_width="90dp"
-                                    android:layout_height="90dp"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
                                     android:background="@color/white"
                                     app:cardCornerRadius="5dp"
                                     app:cardUseCompatPadding="true">
@@ -255,8 +256,8 @@
                                         android:orientation="vertical">
 
                                         <ImageView
-                                            android:layout_width="40dp"
-                                            android:layout_height="40dp"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
                                             android:layout_gravity="center_horizontal"
                                             android:layout_margin="5dp"
                                             android:src="@drawable/custom_room" />
@@ -274,8 +275,8 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <androidx.cardview.widget.CardView
-                                    android:layout_width="90dp"
-                                    android:layout_height="90dp"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
                                     android:background="@color/white"
                                     app:cardCornerRadius="5dp"
                                     app:cardUseCompatPadding="true">
@@ -286,8 +287,8 @@
                                         android:orientation="vertical">
 
                                         <ImageView
-                                            android:layout_width="40dp"
-                                            android:layout_height="40dp"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
                                             android:layout_gravity="center_horizontal"
                                             android:layout_margin="5dp"
                                             android:src="@drawable/tournament" />
@@ -309,8 +310,8 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <androidx.cardview.widget.CardView
-                                    android:layout_width="90dp"
-                                    android:layout_height="90dp"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
                                     android:background="@color/white"
                                     app:cardCornerRadius="5dp"
                                     app:cardUseCompatPadding="true">
@@ -321,8 +322,8 @@
                                         android:orientation="vertical">
 
                                         <ImageView
-                                            android:layout_width="40dp"
-                                            android:layout_height="40dp"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
                                             android:layout_gravity="center_horizontal"
                                             android:layout_margin="5dp"
                                             android:src="@drawable/video" />
@@ -340,8 +341,8 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <androidx.cardview.widget.CardView
-                                    android:layout_width="90dp"
-                                    android:layout_height="90dp"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
                                     android:background="@color/white"
                                     app:cardCornerRadius="5dp"
                                     app:cardUseCompatPadding="true">
@@ -352,8 +353,8 @@
                                         android:orientation="vertical">
 
                                         <ImageView
-                                            android:layout_width="40dp"
-                                            android:layout_height="40dp"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
                                             android:layout_gravity="center_horizontal"
                                             android:layout_margin="5dp"
                                             android:src="@drawable/tipsntricks" />
@@ -375,8 +376,8 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <androidx.cardview.widget.CardView
-                                    android:layout_width="90dp"
-                                    android:layout_height="90dp"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
                                     android:background="@color/white"
                                     app:cardCornerRadius="5dp"
                                     app:cardUseCompatPadding="true">
@@ -429,14 +430,12 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:layout_gravity="center"
-                            android:layout_marginTop="5dp"
                             android:text="@string/announcements_text"
                             android:textAppearance="@style/TextAppearance.AppCompat.Large"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/announcement_recycler"
-                            android:layout_marginTop="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
