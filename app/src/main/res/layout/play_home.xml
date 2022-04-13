@@ -20,14 +20,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
-            android:ellipsize="marquee"
             android:gravity="center"
-            android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
             android:text="@string/app_name"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/white"
             android:textStyle="bold" />
         <LinearLayout
@@ -37,23 +35,28 @@
             android:orientation="horizontal">
         <LinearLayout
             android:id="@+id/profile_layout"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:background="@drawable/white_round_corner"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="21dp"
-                android:layout_height="25dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:scaleType="fitXY"
+                android:scaleType="centerInside"
+                android:background="@drawable/white_round_corner"
+                android:paddingBottom="10dp"
                 android:src="@drawable/man" />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"/>
         </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/aspect_lib_margin_16dp"
+                android:layout_gravity="top"
                 android:layout_weight="1"
                 android:orientation="vertical">
             <TextView
@@ -69,6 +72,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
                 android:textStyle="normal" />
+
                 <TextView
                     android:id="@+id/balance_text"
                     android:layout_width="wrap_content"
@@ -117,22 +121,22 @@
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/notification_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="@dimen/aspect_lib_margin_4dp"
                     android:src="@drawable/ic_notifications_24" />
                 <ImageView
                     android:id="@+id/friend_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="@dimen/aspect_lib_margin_4dp"
                     android:src="@drawable/ic_group_24"/>
                 <ImageView
                     android:id="@+id/statics_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="@dimen/aspect_lib_margin_4dp"
@@ -431,7 +435,7 @@
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:text="@string/announcements_text"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
                         <androidx.recyclerview.widget.RecyclerView
