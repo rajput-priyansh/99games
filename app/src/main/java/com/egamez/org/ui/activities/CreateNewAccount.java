@@ -5,11 +5,19 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.util.Base64;
 import android.util.Log;
 import android.util.Patterns;
@@ -67,7 +75,7 @@ import static com.android.volley.Request.Method.GET;
 public class CreateNewAccount extends AppCompatActivity implements CountryCodeItemClick {
 
     EditText userNameEt, emailEt, mobileEt, passwordEt, promoCodeEt, confirmPasswordEt;
-    Button registerNewAccount;
+    TextView registerNewAccount;
     RequestQueue mQueue, dQueue;
     LoadingDialog loadingDialog;
     String userName = "";
@@ -99,7 +107,7 @@ public class CreateNewAccount extends AppCompatActivity implements CountryCodeIt
         passwordEt = (EditText) findViewById(R.id.register_password);
         promoCodeEt = (EditText) findViewById(R.id.register_promocode);
         confirmPasswordEt = (EditText) findViewById(R.id.register_confirmpassword);
-        registerNewAccount = (Button) findViewById(R.id.registernewaccount);
+        registerNewAccount = (TextView) findViewById(R.id.registernewaccount);
 
         countrycodespinner = (TextView) findViewById(R.id.countrycodespinnerregister);
 
@@ -228,8 +236,16 @@ public class CreateNewAccount extends AppCompatActivity implements CountryCodeIt
             }
         });
 
-
         signIn = (TextView) findViewById(R.id.signin);
+
+        SpannableString ss = new SpannableString(getResources().getString(R.string.already_login));
+        ss.setSpan(new StyleSpan(Typeface.BOLD), 17, 26, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        // Span to set text color to some RGB value
+        ForegroundColorSpan fcs = new ForegroundColorSpan(Color.parseColor("#05c9d9"));
+        // Set the text color for first 4 characters
+        ss.setSpan(fcs, 17, 26, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        signIn.setText(ss);
+
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

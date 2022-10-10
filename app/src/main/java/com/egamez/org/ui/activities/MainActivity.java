@@ -11,12 +11,14 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.text.Editable;
+import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.util.Base64;
 import android.util.Log;
@@ -98,7 +100,8 @@ import static com.android.volley.Request.Method.GET;
 
 public class MainActivity extends AppCompatActivity implements CountryCodeItemClick {
 
-    CustomTextView createNewAccount, signinMain;
+    ImageView signinMain;
+    TextView createNewAccount;
     EditText userNameMain, passwordMain;
     TextView resetPassword;
     Boolean doubleBackToExitPressedOnce = false;
@@ -111,7 +114,8 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
     String lastname = "";
     String email = "";
     String fbid = "";
-    CustomTextView fb, google;
+    CustomTextView fb;
+    ImageView google;
     LoginButton loginButton;
     CallbackManager callbackManager;
     int RC_SIGN_IN = 23;
@@ -172,9 +176,9 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
 
         loginButton = (LoginButton) findViewById(R.id.login_button);
         fb = (CustomTextView) findViewById(R.id.fb);
-        google = (CustomTextView) findViewById(R.id.googlesignin);
-        //check baner ads enable or not
-        SharedPreferences sp = getSharedPreferences("SMINFO", MODE_PRIVATE);
+        google = (ImageView) findViewById(R.id.googlesignin);
+        //TODO PRI Comment check baner ads enable or not
+        /*SharedPreferences sp = getSharedPreferences("SMINFO", MODE_PRIVATE);
         if (TextUtils.equals(sp.getString("fb", "no"), "no")) {
             fb.setVisibility(View.GONE);
         } else {
@@ -184,15 +188,15 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
             google.setVisibility(View.GONE);
         } else {
             google.setVisibility(View.VISIBLE);
-        }
+        }*/
         loadingDialog = new LoadingDialog(this);
 
         mQueue = Volley.newRequestQueue(getApplicationContext());
         mQueue.getCache().clear();
         userLocalStore = new UserLocalStore(this);
 
-        createNewAccount = (CustomTextView) findViewById(R.id.createnewaccount);
-        signinMain = (CustomTextView) findViewById(R.id.signin_main);
+        createNewAccount = (TextView) findViewById(R.id.createnewaccount);
+        signinMain = (ImageView) findViewById(R.id.signin_main);
         userNameMain = (EditText) findViewById(R.id.username_main);
         passwordMain = (EditText) findViewById(R.id.password_main);
         resetPassword = (TextView) findViewById(R.id.resetpassword);
@@ -277,11 +281,11 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
             }
         });
 
-        SpannableString ss = new SpannableString(getResources().getString(R.string.forgot_password__reset_now));
+        SpannableString ss = new SpannableString(getResources().getString(R.string.lbl_don_t_have_an_account_sign_up));
         ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
             public void onClick(View textView) {
-
+                startActivity(new Intent(getApplicationContext(), CreateNewAccount.class));
             }
 
             @Override
@@ -289,9 +293,21 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
 
             }
         };
-        ss.setSpan(new StyleSpan(Typeface.BOLD), 17, 26, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ss.setSpan(clickableSpan, 17, 26, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        resetPassword.setText(ss);
+        ss.setSpan(new StyleSpan(Typeface.BOLD), 22, 29, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan, 22, 29, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        // Span to set text color to some RGB value
+        ForegroundColorSpan fcs = new ForegroundColorSpan(Color.parseColor("#05c9d9"));
+        // Set the text color for first 4 characters
+        ss.setSpan(fcs, 22, 29, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        createNewAccount.setText(ss);
+
+
+
+        SpannableString ss2 = new SpannableString(getResources().getString(R.string.lbl_forgot_password));
+        ss2.setSpan(new StyleSpan(Typeface.BOLD), 0, 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(Color.WHITE, 0, 15, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        resetPassword.setText(ss2);
+
         resetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -367,8 +383,8 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
         final Dialog builder = new Dialog(MainActivity.this);
         builder.setContentView(R.layout.resetpassword);
         final EditText fpemail = builder.findViewById(R.id.fpemail);
-        final Button fpsendemail = (Button) builder.findViewById(R.id.fpsendemail);
-        Button fpcancel = (Button) builder.findViewById(R.id.fpcancel);
+        final TextView fpsendemail = (TextView) builder.findViewById(R.id.fpsendemail);
+        TextView fpcancel = (TextView) builder.findViewById(R.id.fpcancel);
 
         fpsendemail.setOnClickListener(new View.OnClickListener() {
             @Override

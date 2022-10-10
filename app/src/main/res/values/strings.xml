@@ -21,7 +21,7 @@
     <string name="admob_reward">ca-app-pub-3940256099942544/5224354917</string><!--test -->
 
     <!--For language-->
-    <string name="already_login"><u>Already register? <b>Login Now</b></u></string>
+    <string name="already_login">Already register?Login Now</string>
 
     <!--AddMoneyActivity-->
     <string name="payment_method_not_available">Payment method not available</string>
@@ -267,7 +267,7 @@
     <string name="join_note">Note - Please Enter Your In Game Username/Name.</string>
     <!--activity_leaderboard-->
     <string name="leaderboard">Leaderboard</string>
-    <string name="Username">Username</string>
+    <string name="Username">User name</string>
     <string name="total_referral">Total Referral</string>
     <!--activity_main-->
     <string name="login">Login</string>
@@ -442,4 +442,10 @@
     <string name="show_case_5">Tap here to withdraw points from wallet</string>
     <string name="join_now_select_time"><![CDATA[JOIN NOW & SELECT TIME]]></string>
     <string name="announcements_text">Announcements</string>
+    <string name="lbl_forgot_password">Forgot Password?</string>
+    <string name="lbl_don_t_have_an_account_sign_up">Don\'t have An Account?Sign Up</string>
+    <string name="lbl_with_google">With Google</string>
+    <string name="lbl_with_facebook">With Facebook</string>
+    <string name="lbl_enter_name">Enter Name</string>
+    <string name="lbl_enter_password">Enter Password</string>
 </resources>

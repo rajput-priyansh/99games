@@ -147,15 +147,6 @@ public class FirstActivity extends AppCompatActivity {
             stringRequest.setRetryPolicy(new DefaultRetryPolicy(15000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             AppSingletoneClass.getInstance(FirstActivity.this).addToRequestQueue(stringRequest, "update_myprofile");
 
-            
-            
-            
-            
-            
-            
-            
-            
-
            /* dQueue = Volley.newRequestQueue(getApplicationContext());
             dQueue.getCache().clear();
 
@@ -217,7 +208,6 @@ public class FirstActivity extends AppCompatActivity {
         }
 
         // call version api for check latest version
-
         vQueue = Volley.newRequestQueue(this);
         vQueue.getCache().clear();
 
@@ -226,7 +216,6 @@ public class FirstActivity extends AppCompatActivity {
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, vurl, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-
                 Log.d("version", response.toString());
                 try {
                     latestVersionName = response.getString("version");
@@ -286,7 +275,6 @@ public class FirstActivity extends AppCompatActivity {
                         tipsHanlder.post(tipsRunnable);
 
                     } else {
-
                         if (TextUtils.equals(forceUpdate, "Yes")) {
                             if (TextUtils.equals(forceLogout, "Yes")) {
                                 logoutall();
@@ -337,8 +325,6 @@ public class FirstActivity extends AppCompatActivity {
                             builder.create();
                             builder.show();
                         }
-
-
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -370,14 +356,16 @@ public class FirstActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
-
+                //hide progress
+                loadingDialog.dismiss();
                 NetworkResponse response = error.networkResponse;
                 String errorMsg = "";
                 if (response != null && response.data != null) {
                     errorMsg = new String(response.data);
                 }
                 Log.e("errorversion", error.toString());
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                finishAffinity();
             }
         });
         request.setShouldCache(false);

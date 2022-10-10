@@ -4,233 +4,253 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/ic_app_common_bg"
     tools:context="com.egamez.org.ui.activities.MainActivity">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="?android:attr/actionBarSize"
-            android:layout_gravity="center"
-            android:background="@color/newblue"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:visibility="gone">
-
-            <com.egamez.org.widget.CustomTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/login"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/white"
-                app:fontTextStyle="4" />
-
-
-        </LinearLayout>
-
+        android:layout_above="@+id/createnewaccount"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/_16sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="20dp"
-            android:paddingTop="40dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="40dp">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@mipmap/app_logo" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorAccent">
-
-                <com.egamez.org.widget.CustomEditText
-                    android:id="@+id/username_main"
-                    style="@style/input_style"
-                    android:hint="@string/Username"
-                    app:fontTextStyle="3" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorAccent"
-                app:passwordToggleEnabled="true">
-
-                <com.egamez.org.widget.CustomEditText
-                    android:id="@+id/password_main"
-                    style="@style/input_style"
-                    android:hint="@string/Password"
-                    android:inputType="textPassword"
-                    app:fontTextStyle="3" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.egamez.org.widget.CustomTextView
-                android:id="@+id/resetpassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="@dimen/margin_10"
-                android:clickable="true"
-                android:gravity="center_vertical|end"
-                android:hint="@string/forgot_password__reset_now"
-                android:textColor="@color/newblack"
-                android:textSize="12sp"
-                app:fontTextStyle="3" />
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <!-- <androidx.cardview.widget.CardView
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="20dp"
-                     app:cardCornerRadius="5dp"
-                     app:cardUseCompatPadding="true">-->
-
-                <com.egamez.org.widget.CustomTextView
-                    android:id="@+id/signin_main"
-                    style="@style/login_btn_style"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/LOGIN"
-                    app:fontTextStyle="5" /><!--
-            </androidx.cardview.widget.CardView>-->
-
-
-                <!-- <androidx.cardview.widget.CardView
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="20dp"
-                     app:cardCornerRadius="5dp"
-                     app:cardUseCompatPadding="true">-->
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_gravity="center"
+                android:background="@color/newblue"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone">
 
                 <com.egamez.org.widget.CustomTextView
-                    android:id="@+id/createnewaccount"
-                    style="@style/signup_btn_style"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/SIGNUP"
-                    app:fontTextStyle="5" />
-                <!--                </androidx.cardview.widget.CardView>-->
-                <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginBottom="@dimen/margin_10"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <FrameLayout
-                        android:id="@+id/FrameLayout1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5">
-
-                        <com.facebook.login.widget.LoginButton
-                            android:id="@+id/login_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:visibility="gone" />
-
-
-                        <com.egamez.org.widget.CustomTextView
-                            android:id="@+id/fb"
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:layout_marginLeft="@dimen/margin_10"
-                            android:background="@drawable/btn_round_corner_light_gray"
-                            android:drawableLeft="@drawable/facebook_login"
-                            android:drawablePadding="5dp"
-                            android:gravity="center|center_vertical"
-                            android:onClick="onClick"
-                            android:padding="10dp"
-                            android:text="Sign In"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12sp"
-                            app:fontTextStyle="4" />
-                    </FrameLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5">
-
-                        <com.egamez.org.widget.CustomTextView
-                            android:id="@+id/googlesignin"
-                            android:layout_width="100dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="left"
-                            android:layout_marginLeft="10dp"
-                            android:background="@drawable/btn_round_corner_light_gray"
-                            android:drawableLeft="@drawable/google_plus_login"
-                            android:drawablePadding="5dp"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="Sign In"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12sp"
-                            app:fontTextStyle="4" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="1dp"
-                        android:layout_weight="0.4"
-                        android:background="@color/overlay_dark_30" />
-
-                    <com.egamez.org.widget.CustomTextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:text="OR"
-                        android:textColor="@color/overlay_dark_30"
-                        android:textSize="12sp"
-                        app:fontTextStyle="3" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="1dp"
-                        android:layout_weight="0.4"
-                        android:background="@color/overlay_dark_30" />
-
-                </LinearLayout>
+                    android:text="@string/login"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    app:fontTextStyle="4" />
 
 
             </LinearLayout>
 
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_16sdp"
+                android:paddingTop="@dimen/_36sdp"
+                android:paddingRight="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_36sdp">
 
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_36sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_app_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_36sdp"
+                    android:text="@string/Username"
+                    android:textAllCaps="true"
+                    android:textColor="@color/textprimary" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_username" />
+
+                    <com.egamez.org.widget.CustomEditText
+                        android:id="@+id/username_main"
+                        style="@style/input_style"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:hint="@string/lbl_enter_name"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorAccent"
+                        app:fontTextStyle="3" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/Password"
+                    android:textAllCaps="true"
+                    android:textColor="@color/textprimary" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_password" />
+
+                    <com.egamez.org.widget.CustomEditText
+                        android:id="@+id/password_main"
+                        style="@style/input_style"
+                        android:layout_marginHorizontal="@dimen/_4sdp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:hint="@string/lbl_enter_password"
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/colorAccent"
+                        app:fontTextStyle="3" />
+
+                    <ImageView
+                        android:id="@+id/ivViewPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/_4sdp"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:src="@drawable/ic_iconeye" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <TextView
+                    android:id="@+id/resetpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/lbl_forgot_password"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/signin_main"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_login_bg"
+                        app:fontTextStyle="5" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:background="@drawable/ic_sep_login"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/googlesignin"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_54sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_weight="0.5"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_google_bg" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_54sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_weight="0.5"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_facebook_bg" />
+
+                        <LinearLayout
+                            android:id="@+id/FrameLayout1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/btn_round_corner_light_gray"
+                            android:padding="@dimen/_8sdp"
+                            android:visibility="gone">
+
+                            <com.facebook.login.widget.LoginButton
+                                android:id="@+id/login_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:src="@drawable/ic_facebook" />
+
+                            <com.egamez.org.widget.CustomTextView
+                                android:id="@+id/fb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|center_vertical"
+                                android:onClick="onClick"
+                                android:text="@string/lbl_with_facebook"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                app:fontTextStyle="4" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/createnewaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/lbl_don_t_have_an_account_sign_up"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp" />
 
 </RelativeLayout>

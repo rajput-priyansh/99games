@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/ic_app_common_bg"
     android:orientation="vertical"
     tools:context="com.egamez.org.ui.activities.CreateNewAccount">
 
@@ -43,24 +43,20 @@
             android:padding="20dp">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@mipmap/app_logo" />
-
-            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorAccent">
+                android:layout_height="@dimen/_48sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_36sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_app_logo" />
 
-                <com.egamez.org.widget.CustomEditText
-                    android:id="@+id/register_username"
-                    style="@style/input_style"
-                    android:hint="@string/username"
-                    app:fontTextStyle="3" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
+            <com.egamez.org.widget.CustomEditText
+                android:id="@+id/register_username"
+                style="@style/input_style"
+                android:hint="@string/username"
+                android:textColorHint="@color/colorAccent"
+                app:fontTextStyle="3" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,113 +76,79 @@
                     android:drawablePadding="5dp"
                     android:gravity="center"
                     android:hint="code"
+                    android:textColorHint="@color/colorAccent"
                     app:fontTextStyle="3" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColorHint="@color/colorAccent">
+                <com.egamez.org.widget.CustomEditText
+                    android:id="@+id/register_mobilenumber"
+                    style="@style/input_style"
+                    android:layout_marginBottom="0dp"
+                    android:hint="@string/mobile"
+                    android:inputType="phone"
+                    android:textColorHint="@color/colorAccent"
+                    app:fontTextStyle="3" />
 
-                    <com.egamez.org.widget.CustomEditText
-                        android:id="@+id/register_mobilenumber"
-                        style="@style/input_style"
-                        android:layout_marginBottom="0dp"
-                        android:hint="@string/mobile"
-                        android:inputType="phone"
-                        app:fontTextStyle="3" />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
+            <com.egamez.org.widget.CustomEditText
+                android:id="@+id/register_email"
+                style="@style/input_style"
+                android:hint="@string/Email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/colorAccent"
+                app:fontTextStyle="3" />
+
+            <com.egamez.org.widget.CustomEditText
+                android:id="@+id/register_promocode"
+                style="@style/input_style"
+                android:hint="@string/referral_code"
+                android:textColorHint="@color/colorAccent"
+                app:fontTextStyle="3" />
+
+            <com.egamez.org.widget.CustomEditText
+                android:id="@+id/register_password"
+                style="@style/input_style"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/colorAccent"
+                app:fontTextStyle="3" />
+
+            <com.egamez.org.widget.CustomEditText
+                android:id="@+id/register_confirmpassword"
+                style="@style/input_style"
                 android:layout_width="match_parent"
+                android:hint="Confirm Password*"
+                android:inputType="textPassword"
+                android:textColorHint="@color/colorAccent"
+                app:fontTextStyle="3" />
+
+
+            <TextView
+                android:id="@+id/registernewaccount"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/colorAccent">
-
-                <com.egamez.org.widget.CustomEditText
-                    android:id="@+id/register_email"
-                    style="@style/input_style"
-                    android:hint="@string/Email"
-                    android:inputType="textEmailAddress"
-                    app:fontTextStyle="3" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorAccent">
-
-                <com.egamez.org.widget.CustomEditText
-                    android:id="@+id/register_promocode"
-                    style="@style/input_style"
-                    android:hint="@string/referral_code"
-                    app:fontTextStyle="3" />
+                android:paddingVertical="@dimen/_8sdp"
+                android:background="@drawable/button_bg_app"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:text="@string/SIGNUP"
+                android:layout_gravity="center_horizontal"
+                android:paddingHorizontal="@dimen/_24sdp"
+                android:textColor="@color/white"
+                android:elevation="@dimen/_2sdp"/>
 
 
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorAccent">
-
-                <com.egamez.org.widget.CustomEditText
-                    android:id="@+id/register_password"
-                    style="@style/input_style"
-                    android:hint="@string/password"
-                    android:inputType="textPassword"
-                    app:fontTextStyle="3" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/newblack"
-                android:visibility="gone"
-                app:passwordToggleEnabled="true">
-
-
-                <com.egamez.org.widget.CustomEditText
-                    android:id="@+id/register_confirmpassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="Confirm Password*"
-                    android:inputType="textPassword"
-                    app:fontTextStyle="3" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="5dp"
-                app:cardUseCompatPadding="true">
-
-                <com.egamez.org.widget.CustomButton
-                    android:id="@+id/registernewaccount"
-                    style="@style/login_btn_style"
-                    android:text="@string/SIGNUP"
-                    app:fontTextStyle="5" />
-
-            </androidx.cardview.widget.CardView>
-
-            <com.egamez.org.widget.CustomTextView
+            <TextView
                 android:id="@+id/signin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_10"
                 android:layout_marginBottom="@dimen/margin_10"
-                android:clickable="true"
                 android:gravity="center_vertical|end"
                 android:text="@string/already_login"
-                android:textColor="@color/newblack"
-                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
                 app:fontTextStyle="3" />
         </LinearLayout>
     </ScrollView>

@@ -83,6 +83,7 @@ dependencies {
     implementation 'com.github.siyamed:android-shape-imageview:0.9.3'
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'com.google.ar.sceneform:filament-android:1.17.1'
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
@@ -137,6 +138,7 @@ dependencies {
     implementation 'np.com.susanthapa:curved_bottom_navigation:0.6.5'
 
     def nav_version = "2.3.5"
+    def ssp_version = "1.0.6"
 
     // Java language implementation
     implementation "androidx.navigation:navigation-fragment:$nav_version"
@@ -145,6 +147,9 @@ dependencies {
 //    Image cropper
 //    implementation 'com.yalantis:ucrop:2.2.0'
     implementation 'com.github.lyrebirdstudio:Croppy:0.2'
+
+    implementation "com.intuit.sdp:sdp-android:$ssp_version"
+    implementation "com.intuit.ssp:ssp-android:$ssp_version"
 
 }
 apply plugin: 'com.google.gms.google-services'

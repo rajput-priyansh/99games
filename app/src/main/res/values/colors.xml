@@ -25,6 +25,7 @@
     <color name="newlightgreen">#835ECEB3</color>
     <color name="newdisablegreen">#87D5C2</color>
     <color name="newdisableblack">#788694</color>
+    <color name="textprimary">#05c9d9</color>
 
     <color name="time_slot_selection_bg">#dcdce0</color>
     <color name="time_slot_selection_divider">#aaaaad</color>
@@ -91,4 +92,5 @@
         <item>@color/newblue</item>
         <item>@color/newblue</item>
     </array>
+
 </resources>
