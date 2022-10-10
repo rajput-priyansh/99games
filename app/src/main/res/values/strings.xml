@@ -446,6 +446,6 @@
     <string name="lbl_don_t_have_an_account_sign_up">Don\'t have An Account?Sign Up</string>
     <string name="lbl_with_google">With Google</string>
     <string name="lbl_with_facebook">With Facebook</string>
-    <string name="lbl_enter_name">Enter Name</string>
-    <string name="lbl_enter_password">Enter Password</string>
+    <string name="lbl_enter_name">ENTER NAME</string>
+    <string name="lbl_enter_password">ENTER PASSWORD</string>
 </resources>

@@ -29,6 +29,7 @@
 
     <color name="time_slot_selection_bg">#dcdce0</color>
     <color name="time_slot_selection_divider">#aaaaad</color>
+    <color name="hintcolor">#7d79a0</color>
 
     <!--    <color name="newblue">#363636</color>-->
 

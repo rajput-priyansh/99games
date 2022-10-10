@@ -100,7 +100,7 @@ import static com.android.volley.Request.Method.GET;
 
 public class MainActivity extends AppCompatActivity implements CountryCodeItemClick {
 
-    ImageView signinMain;
+    TextView signinMain;
     TextView createNewAccount;
     EditText userNameMain, passwordMain;
     TextView resetPassword;
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
     String email = "";
     String fbid = "";
     CustomTextView fb;
-    ImageView google;
+    CustomTextView google;
     LoginButton loginButton;
     CallbackManager callbackManager;
     int RC_SIGN_IN = 23;
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
 
         loginButton = (LoginButton) findViewById(R.id.login_button);
         fb = (CustomTextView) findViewById(R.id.fb);
-        google = (ImageView) findViewById(R.id.googlesignin);
+        google = (CustomTextView) findViewById(R.id.googlesignin);
         //TODO PRI Comment check baner ads enable or not
         /*SharedPreferences sp = getSharedPreferences("SMINFO", MODE_PRIVATE);
         if (TextUtils.equals(sp.getString("fb", "no"), "no")) {
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
         userLocalStore = new UserLocalStore(this);
 
         createNewAccount = (TextView) findViewById(R.id.createnewaccount);
-        signinMain = (ImageView) findViewById(R.id.signin_main);
+        signinMain = (TextView) findViewById(R.id.signin_main);
         userNameMain = (EditText) findViewById(R.id.username_main);
         passwordMain = (EditText) findViewById(R.id.password_main);
         resetPassword = (TextView) findViewById(R.id.resetpassword);
@@ -304,7 +304,7 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
 
 
         SpannableString ss2 = new SpannableString(getResources().getString(R.string.lbl_forgot_password));
-        ss2.setSpan(new StyleSpan(Typeface.BOLD), 0, 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        //ss2.setSpan(new StyleSpan(Typeface.BOLD), 0, 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         ss.setSpan(Color.WHITE, 0, 15, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         resetPassword.setText(ss2);
 

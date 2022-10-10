@@ -51,19 +51,40 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_app_logo" />
 
-            <com.egamez.org.widget.CustomEditText
-                android:id="@+id/register_username"
-                style="@style/input_style"
-                android:hint="@string/username"
-                android:textColorHint="@color/colorAccent"
-                app:fontTextStyle="3" />
-
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/bg_input_border">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_44sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:background="@drawable/edittext_setup"/>
+                <com.egamez.org.widget.CustomEditText
+                    android:id="@+id/register_username"
+                    style="@style/input_style"
+                    android:textColor="@color/textprimary"
+                    android:hint="@string/username"
+                    android:textColorHint="@color/hintcolor"
+                    android:background="@null"
+                    android:layout_marginBottom="0dp"
+                    app:fontTextStyle="3" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_input_border">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_44sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:background="@drawable/edittext_setup"/>
 
                 <com.egamez.org.widget.CustomTextView
                     android:id="@+id/countrycodespinnerregister"
@@ -76,68 +97,129 @@
                     android:drawablePadding="5dp"
                     android:gravity="center"
                     android:hint="code"
-                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/textprimary"
+                    android:textColorHint="@color/hintcolor"
                     app:fontTextStyle="3" />
 
                 <com.egamez.org.widget.CustomEditText
                     android:id="@+id/register_mobilenumber"
                     style="@style/input_style"
-                    android:layout_marginBottom="0dp"
                     android:hint="@string/mobile"
+                    android:layout_toRightOf="@+id/countrycodespinnerregister"
+                    android:textColor="@color/textprimary"
                     android:inputType="phone"
-                    android:textColorHint="@color/colorAccent"
+                    android:background="@null"
+                    android:layout_marginBottom="0dp"
+                    android:textColorHint="@color/hintcolor"
                     app:fontTextStyle="3" />
 
-            </LinearLayout>
+            </RelativeLayout>
 
-            <com.egamez.org.widget.CustomEditText
-                android:id="@+id/register_email"
-                style="@style/input_style"
-                android:hint="@string/Email"
-                android:inputType="textEmailAddress"
-                android:textColorHint="@color/colorAccent"
-                app:fontTextStyle="3" />
-
-            <com.egamez.org.widget.CustomEditText
-                android:id="@+id/register_promocode"
-                style="@style/input_style"
-                android:hint="@string/referral_code"
-                android:textColorHint="@color/colorAccent"
-                app:fontTextStyle="3" />
-
-            <com.egamez.org.widget.CustomEditText
-                android:id="@+id/register_password"
-                style="@style/input_style"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:textColorHint="@color/colorAccent"
-                app:fontTextStyle="3" />
-
-            <com.egamez.org.widget.CustomEditText
-                android:id="@+id/register_confirmpassword"
-                style="@style/input_style"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:hint="Confirm Password*"
-                android:inputType="textPassword"
-                android:textColorHint="@color/colorAccent"
-                app:fontTextStyle="3" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_input_border">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_44sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:background="@drawable/edittext_setup"/>
+                <com.egamez.org.widget.CustomEditText
+                    android:id="@+id/register_email"
+                    style="@style/input_style"
+                    android:hint="@string/Email"
+                    android:textColor="@color/textprimary"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/hintcolor"
+                    android:background="@null"
+                    android:layout_marginBottom="0dp"
+                    app:fontTextStyle="3" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_input_border">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_44sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:background="@drawable/edittext_setup"/>
+                <com.egamez.org.widget.CustomEditText
+                    android:id="@+id/register_promocode"
+                    style="@style/input_style"
+                    android:hint="@string/referral_code"
+                    android:textColorHint="@color/hintcolor"
+                    android:textColor="@color/textprimary"
+                    android:background="@null"
+                    android:layout_marginBottom="0dp"
+                    app:fontTextStyle="3" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_input_border">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_44sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:background="@drawable/edittext_setup"/>
+                <com.egamez.org.widget.CustomEditText
+                    android:id="@+id/register_password"
+                    style="@style/input_style"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/textprimary"
+                    android:textColorHint="@color/hintcolor"
+                    android:background="@null"
+                    android:layout_marginBottom="0dp"
+                    app:fontTextStyle="3" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_input_border">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_44sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:background="@drawable/edittext_setup"/>
+                <com.egamez.org.widget.CustomEditText
+                    android:id="@+id/register_confirmpassword"
+                    style="@style/input_style"
+                    android:layout_width="match_parent"
+                    android:hint="Confirm Password*"
+                    android:inputType="textPassword"
+                    android:textColor="@color/textprimary"
+                    android:background="@null"
+                    android:layout_marginBottom="0dp"
+                    android:textColorHint="@color/hintcolor"
+                    app:fontTextStyle="3" />
+            </FrameLayout>
 
 
             <TextView
                 android:id="@+id/registernewaccount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingVertical="@dimen/_8sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_16sdp"
                 android:background="@drawable/button_bg_app"
+                android:elevation="@dimen/_2sdp"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                android:layout_marginStart="@dimen/_4sdp"
+                android:paddingHorizontal="@dimen/_36sdp"
+                android:paddingVertical="@dimen/_6sdp"
                 android:text="@string/SIGNUP"
-                android:layout_gravity="center_horizontal"
-                android:paddingHorizontal="@dimen/_24sdp"
                 android:textColor="@color/white"
-                android:elevation="@dimen/_2sdp"/>
-
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/signin"

@@ -13,8 +13,12 @@
         <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/announcement_item.xml" value="0.14114583333333333" />
         <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/me_home.xml" value="0.10207700101317123" />
         <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/play_home.xml" value="0.20018115942028986" />
+        <entry key="app/src/main/res/drawable/bg_facebook_login.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_google_login.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_input_border.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/button_bg_app.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/edittext_setup.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/input_bg_off_white.xml" value="0.1815" />
         <entry key="app/src/main/res/layout/activity_aboutus.xml" value="0.2828125" />
         <entry key="app/src/main/res/layout/activity_app_update.xml" value="0.2828125" />
         <entry key="app/src/main/res/layout/activity_create_new_account.xml" value="0.2828125" />

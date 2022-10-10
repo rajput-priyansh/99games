@@ -68,17 +68,28 @@
                     android:layout_marginTop="@dimen/_36sdp"
                     android:text="@string/Username"
                     android:textAllCaps="true"
+                    android:textSize="@dimen/_12ssp"
                     android:textColor="@color/textprimary" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_border"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:orientation="horizontal">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_44sdp"
+                        android:paddingVertical="@dimen/_12sdp"
+                        android:background="@drawable/edittext_setup"/>
 
                     <ImageView
+                        android:id="@+id/ivUserName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:src="@drawable/ic_username" />
 
                     <com.egamez.org.widget.CustomEditText
@@ -86,14 +97,16 @@
                         style="@style/input_style"
                         android:layout_marginStart="@dimen/_4sdp"
                         android:layout_marginBottom="0dp"
-                        android:layout_weight="1"
+                        android:layout_toEndOf="@+id/ivUserName"
+                        android:background="@null"
                         android:hint="@string/lbl_enter_name"
                         android:lines="1"
                         android:singleLine="true"
-                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/textprimary"
+                        android:textColorHint="@color/hintcolor"
                         app:fontTextStyle="3" />
 
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -101,17 +114,30 @@
                     android:layout_marginTop="@dimen/_8sdp"
                     android:text="@string/Password"
                     android:textAllCaps="true"
+                    android:textSize="@dimen/_12ssp"
                     android:textColor="@color/textprimary" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_input_border"
                     android:orientation="horizontal">
 
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_44sdp"
+                        android:paddingVertical="@dimen/_12sdp"
+                        android:background="@drawable/edittext_setup"/>
+
+
                     <ImageView
+                        android:id="@+id/ivPassword"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:src="@drawable/ic_password" />
 
                     <com.egamez.org.widget.CustomEditText
@@ -119,22 +145,29 @@
                         style="@style/input_style"
                         android:layout_marginHorizontal="@dimen/_4sdp"
                         android:layout_marginBottom="0dp"
+                        android:layout_toStartOf="@+id/ivViewPassword"
+                        android:layout_toEndOf="@+id/ivPassword"
                         android:layout_weight="1"
+                        android:background="@null"
                         android:hint="@string/lbl_enter_password"
                         android:inputType="textPassword"
-                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/textprimary"
+                        android:textColorHint="@color/hintcolor"
                         app:fontTextStyle="3" />
 
                     <ImageView
                         android:id="@+id/ivViewPassword"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_4sdp"
                         android:paddingHorizontal="@dimen/_4sdp"
                         android:paddingVertical="@dimen/_8sdp"
                         android:src="@drawable/ic_iconeye" />
 
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
 
 
                 <TextView
@@ -146,7 +179,7 @@
                     android:gravity="center_vertical|end"
                     android:hint="@string/lbl_forgot_password"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12ssp" />
+                    android:textSize="@dimen/_10ssp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -154,14 +187,19 @@
                     android:orientation="vertical">
 
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/signin_main"
-                        android:layout_width="@dimen/_120sdp"
-                        android:layout_height="@dimen/_60sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/_16sdp"
-                        android:scaleType="fitXY"
+                        android:background="@drawable/button_bg_app"
                         android:src="@drawable/ic_login_bg"
+                        android:text="@string/LOGIN"
+                        android:textColor="@color/white"
+                        android:paddingHorizontal="@dimen/_36sdp"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:elevation="@dimen/_2sdp"
                         app:fontTextStyle="5" />
 
                     <ImageView
@@ -180,32 +218,46 @@
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
-                        <ImageView
-                            android:id="@+id/googlesignin"
+                        <LinearLayout
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_54sdp"
-                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4sdp"
                             android:layout_weight="0.5"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/ic_google_bg" />
+                            android:background="@drawable/bg_google_login"
+                            android:padding="@dimen/_8sdp"
+                            android:visibility="visible"
+                            android:elevation="@dimen/_3sdp">
 
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="@dimen/_54sdp"
-                            android:layout_marginEnd="@dimen/_8sdp"
-                            android:layout_weight="0.5"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/ic_facebook_bg" />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_6sdp"
+                                android:layout_marginEnd="@dimen/_4sdp"
+                                android:src="@drawable/ic_google" />
+
+                            <com.egamez.org.widget.CustomTextView
+                                android:id="@+id/googlesignin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|center_vertical"
+                                android:onClick="onClick"
+                                android:text="@string/lbl_with_google"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                app:fontTextStyle="4" />
+                        </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/FrameLayout1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
                             android:layout_weight="0.5"
-                            android:background="@drawable/btn_round_corner_light_gray"
+                            android:background="@drawable/bg_facebook_login"
                             android:padding="@dimen/_8sdp"
-                            android:visibility="gone">
+                            android:elevation="@dimen/_3sdp"
+                            android:visibility="visible">
 
                             <com.facebook.login.widget.LoginButton
                                 android:id="@+id/login_button"
@@ -217,8 +269,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="@dimen/_8sdp"
-                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:layout_marginStart="@dimen/_6sdp"
+                                android:layout_marginEnd="@dimen/_4sdp"
                                 android:src="@drawable/ic_facebook" />
 
                             <com.egamez.org.widget.CustomTextView
