@@ -339,7 +339,8 @@ public class MainActivity extends AppCompatActivity implements CountryCodeItemCl
                 }
 
                 //after validate call login api
-                loginuser(username, password, "login");
+//                loginuser(username, password, "login");
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class).putExtra("N", "0"));
             }
         });
 

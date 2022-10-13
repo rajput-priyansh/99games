@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.egamez.org.R;
 import com.egamez.org.models.GameData;
+import com.egamez.org.widget.CustomTextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -30,17 +32,17 @@ public class AllGamesAdapter extends RecyclerView.Adapter<AllGamesAdapter.DataOb
     private static MyClickListener myClickListener;
 
     public static class DataObjectHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        CardView gamecardview;
+        FrameLayout gamecardview;
         ImageView gamebaner;
-        TextView gamename;
-        TextView matchesText;
+        CustomTextView gamename;
+        CustomTextView matchesText;
         ImageView showcaseimage;
         public DataObjectHolder(View itemView) {
             super(itemView);
-             gamecardview = (CardView) itemView.findViewById(R.id.gamecardview);
+             gamecardview = (FrameLayout) itemView.findViewById(R.id.gamecardview);
              gamebaner = (ImageView) itemView.findViewById(R.id.gamebanner);
-             gamename = (TextView) itemView.findViewById(R.id.gamename);
-             matchesText = (TextView) itemView.findViewById(R.id.matches_text);
+             gamename = (CustomTextView) itemView.findViewById(R.id.gamename);
+             matchesText = (CustomTextView) itemView.findViewById(R.id.matches_text);
              showcaseimage = (ImageView) itemView.findViewById(R.id.showcaseimage);
             Log.i(LOG_TAG, "Adding Listener");
             itemView.setOnClickListener(this);
@@ -87,7 +89,8 @@ public class AllGamesAdapter extends RecyclerView.Adapter<AllGamesAdapter.DataOb
             data.setGameImage(data.getGameImage().replace("http://", "https://"));
         }
         System.out.println("image>>>>>"+data.getGameImage());
-        Picasso.get().load(data.getGameImage()).placeholder(R.drawable.default_battlemania).fit().into(holder.gamebaner);
+        int error = position%2 == 0 ? R.drawable.ic_mask_group : R.drawable.ic_mask_group_two;
+        Picasso.get().load(data.getGameImage()).placeholder(R.drawable.default_battlemania).error(error).fit().into(holder.gamebaner);
         holder.gamename.setText(data.getGameName());
     }
     public FancyShowCaseView addView(View view, String title, String n) {

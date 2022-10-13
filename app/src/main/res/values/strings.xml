@@ -441,7 +441,7 @@
     <string name="show_case_4">Tap here to add points in wallet</string>
     <string name="show_case_5">Tap here to withdraw points from wallet</string>
     <string name="join_now_select_time"><![CDATA[JOIN NOW & SELECT TIME]]></string>
-    <string name="announcements_text">Announcements</string>
+    <string name="announcements_text">ANNOUNCEMENTS</string>
     <string name="lbl_forgot_password">Forgot Password?</string>
     <string name="lbl_don_t_have_an_account_sign_up">Don\'t have An Account?Sign Up</string>
     <string name="lbl_with_google">With Google</string>

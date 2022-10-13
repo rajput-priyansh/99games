@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/gamecardview"
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_90sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_100sdp"
         android:layout_margin="@dimen/_4sdp"
         android:background="@drawable/bg_rounded_yellow_border_radious">
 
@@ -23,15 +24,15 @@
                 android:id="@+id/gamebanner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:scaleType="center"
+                android:layout_above="@id/text_bottom"
                 android:layout_marginHorizontal="@dimen/_3sdp"
                 android:layout_marginTop="@dimen/_3sdp"
-                android:background="@color/newred"
-                android:layout_above="@id/text_bottom"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_demo_pubg"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/roundedImageView8dp" />
+                app:shapeAppearanceOverlay="@style/roundedImageView4dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -54,16 +55,17 @@
                 android:layout_alignParentBottom="true"
                 android:orientation="vertical">
 
-                <TextView
+                <com.egamez.org.widget.CustomTextView
                     android:id="@+id/gamename"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:paddingVertical="@dimen/_4sdp"
-                    android:text="PUBG MOBILE"
-                    android:textSize="@dimen/_10ssp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    tools:text="PUBG MOBILE"
+                    android:textSize="@dimen/_8ssp"
                     android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    app:fontTextStyle="5" />
             </LinearLayout>
 
             <ImageView
@@ -72,23 +74,25 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="@dimen/_6sdp"
                 android:layout_marginBottom="@dimen/_16sdp"
+                android:visibility="gone"
                 android:src="@drawable/ic_circle_meta" />
 
-            <TextView
+            <com.egamez.org.widget.CustomTextView
                 android:id="@+id/matches_text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/_15sdp"
+                android:layout_height="@dimen/_16sdp"
                 android:layout_marginStart="@dimen/_1sdp"
                 android:layout_marginTop="@dimen/_1sdp"
-                android:layout_marginEnd="@dimen/_30sdp"
                 android:background="@drawable/ic_yellow_sclan"
-                android:gravity="center"
-                android:text="Match 0"
+                android:gravity="start|center_vertical"
                 android:lines="1"
+                android:paddingHorizontal="@dimen/_6sdp"
                 android:singleLine="true"
+                android:text="Match 0"
+                android:includeFontPadding="false"
                 android:textColor="@color/newblack"
                 android:textSize="@dimen/_8ssp"
-                android:textStyle="bold" />
+                app:fontTextStyle="3" />
 
         </RelativeLayout>
 

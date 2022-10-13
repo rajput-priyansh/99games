@@ -24,7 +24,7 @@
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/game_image"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_120sdp"
+                android:layout_height="@dimen/_110sdp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:scaleType="center"
                 android:layout_marginHorizontal="@dimen/_8sdp"
@@ -44,7 +44,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
                 <RelativeLayout
@@ -52,31 +52,32 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/name_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MetaClops"
-                        android:layout_toLeftOf="@+id/date_text"
                         android:layout_alignParentStart="true"
                         android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_toLeftOf="@+id/date_text"
+                        android:text="MetaClops"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="#6663ae"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_10ssp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/date_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:layout_alignParentEnd="true"
-                        android:text="22 Mar-2022"
                         android:drawableStart="@drawable/ic_calendar_gold"
                         android:drawablePadding="@dimen/_4sdp"
+                        android:gravity="center"
+                        android:text="22 Mar-2022"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="#6663ae"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_10ssp"
                         android:textStyle="bold" />
                 </RelativeLayout>
                 <ImageView
@@ -87,16 +88,17 @@
                     android:visibility="gone"
                     />
             </LinearLayout>
-            <TextView
+            <com.egamez.org.widget.CustomTextView
                 android:id="@+id/dec_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="This is sample announcement made by MetaClops"
                 android:layout_marginHorizontal="@dimen/_8sdp"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="@dimen/_11ssp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:fontTextStyle="5"/>
 
         </LinearLayout>
 

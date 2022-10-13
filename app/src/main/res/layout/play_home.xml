@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:background="@drawable/ic_component_bg"
         android:orientation="vertical"
-        android:padding="@dimen/_8sdp">
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingTop="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_16sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -65,6 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/_12sdp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -82,22 +85,24 @@
                     android:scaleType="centerInside"
                     android:src="@drawable/man" />
 
-                <TextView
+                <com.egamez.org.widget.CustomTextView
                     android:id="@+id/username_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="@dimen/_4sdp"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12ssp"
+                    android:includeFontPadding="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:fontTextStyle="3"
                     tools:text="Priyansh Rajput" />
 
                 <ImageView
                     android:id="@+id/ivEdit"
-                    android:layout_width="@dimen/_16sdp"
-                    android:layout_height="@dimen/_16sdp"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
                     android:layout_marginStart="@dimen/_4sdp"
-                    android:src="@drawable/ic_edit"/>
+                    android:src="@drawable/ic_edit_new"/>
 
             </LinearLayout>
 
@@ -121,13 +126,13 @@
                     android:id="@+id/balance_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="@dimen/_4sdp"
-                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/ivPulse"
                     android:gravity="center_vertical"
                     android:singleLine="true"
                     android:text="0000"
-                    android:layout_toStartOf="@+id/ivPulse"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/white"
                     android:textStyle="normal" />
@@ -234,9 +239,6 @@
                             android:layout_height="wrap_content"
                             android:nestedScrollingEnabled="false"
                             android:overScrollMode="never"
-                            android:paddingLeft="7dp"
-                            android:paddingTop="7dp"
-                            android:paddingRight="7dp"
                             android:scrollbars="none">
 
                             <LinearLayout
@@ -247,7 +249,7 @@
 
                                 <LinearLayout
                                     android:id="@+id/cvHowToPlay"
-                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_width="@dimen/_60sdp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="@dimen/_8sdp"
                                     android:layout_marginTop="@dimen/_16sdp"
@@ -255,8 +257,8 @@
 
                                     <RelativeLayout
                                         android:id="@+id/rvPlay"
-                                        android:layout_width="@dimen/_36sdp"
-                                        android:layout_height="@dimen/_36sdp"
+                                        android:layout_width="@dimen/_46sdp"
+                                        android:layout_height="@dimen/_46sdp"
                                         android:layout_gravity="center_horizontal"
                                         android:background="@drawable/bg_circle_setup"
                                         android:elevation="@dimen/_2sdp"
@@ -264,151 +266,152 @@
 
                                         <ImageView
                                             android:id="@+id/ivHowToPlay"
-                                            android:layout_width="@dimen/_16sdp"
-                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_width="@dimen/_24sdp"
+                                            android:layout_height="@dimen/_24sdp"
                                             android:layout_centerInParent="true"
                                             android:src="@drawable/ic_play_inactive" />
                                     </RelativeLayout>
 
-                                    <TextView
+                                    <com.egamez.org.widget.CustomTextView
                                         android:id="@+id/lblHowToPlay"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:layout_marginTop="@dimen/_4sdp"
                                         android:gravity="center"
                                         android:text="@string/lbl_how_to_play"
-                                        android:textColor="@color/white"
-                                        android:textSize="@dimen/_8ssp" />
+                                        android:textColor="@color/input_inactive"
+                                        android:textSize="@dimen/_8ssp"
+                                        app:fontTextStyle="3"/>
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_width="@dimen/_60sdp"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/_8sdp"
                                     android:layout_marginTop="@dimen/_16sdp"
                                     android:orientation="vertical">
 
                                     <RelativeLayout
-                                        android:layout_width="@dimen/_36sdp"
-                                        android:layout_height="@dimen/_36sdp"
+                                        android:layout_width="@dimen/_46sdp"
+                                        android:layout_height="@dimen/_46sdp"
                                         android:layout_gravity="center_horizontal"
                                         android:background="@drawable/bg_circle_setup"
                                         android:elevation="@dimen/_2sdp"
                                         android:enabled="false">
 
                                         <ImageView
-                                            android:layout_width="@dimen/_16sdp"
-                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_width="@dimen/_24sdp"
+                                            android:layout_height="@dimen/_24sdp"
                                             android:layout_centerInParent="true"
                                             android:src="@drawable/ic_rooms_inactive" />
                                     </RelativeLayout>
 
-                                    <TextView
+                                    <com.egamez.org.widget.CustomTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:layout_marginTop="@dimen/_4sdp"
                                         android:text="@string/lbl_rooms"
-                                        android:textColor="@color/white"
+                                        app:fontTextStyle="3"
+                                        android:textColor="@color/input_inactive"
                                         android:textSize="@dimen/_8ssp" /><!--#bd77de-->
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_width="@dimen/_60sdp"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/_8sdp"
                                     android:layout_marginTop="@dimen/_16sdp"
                                     android:orientation="vertical">
 
                                     <RelativeLayout
-                                        android:layout_width="@dimen/_36sdp"
-                                        android:layout_height="@dimen/_36sdp"
+                                        android:layout_width="@dimen/_46sdp"
+                                        android:layout_height="@dimen/_46sdp"
                                         android:layout_gravity="center_horizontal"
                                         android:background="@drawable/bg_circle_setup"
                                         android:elevation="@dimen/_2sdp"
                                         android:enabled="false">
 
                                         <ImageView
-                                            android:layout_width="@dimen/_16sdp"
-                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_width="@dimen/_24sdp"
+                                            android:layout_height="@dimen/_24sdp"
                                             android:layout_centerInParent="true"
                                             android:src="@drawable/ic_tournament_inactive" />
                                     </RelativeLayout>
 
-                                    <TextView
+                                    <com.egamez.org.widget.CustomTextView
                                         android:id="@+id/txtTournamentTitle"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:layout_marginTop="@dimen/_4sdp"
                                         android:text="@string/lbl_tournament"
-                                        android:textColor="@color/white"
+                                        app:fontTextStyle="3"
+                                        android:textColor="@color/input_inactive"
                                         android:textSize="@dimen/_8ssp" />
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_width="@dimen/_60sdp"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/_8sdp"
                                     android:layout_marginTop="@dimen/_16sdp"
                                     android:orientation="vertical">
 
                                     <RelativeLayout
-                                        android:layout_width="@dimen/_36sdp"
-                                        android:layout_height="@dimen/_36sdp"
+                                        android:layout_width="@dimen/_46sdp"
+                                        android:layout_height="@dimen/_46sdp"
                                         android:layout_gravity="center_horizontal"
                                         android:background="@drawable/bg_circle_setup"
                                         android:elevation="@dimen/_2sdp"
                                         android:enabled="false">
 
                                         <ImageView
-                                            android:layout_width="@dimen/_16sdp"
-                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_width="@dimen/_24sdp"
+                                            android:layout_height="@dimen/_24sdp"
                                             android:layout_centerInParent="true"
                                             android:src="@drawable/ic_video_inactive" />
                                     </RelativeLayout>
 
-                                    <TextView
+                                    <com.egamez.org.widget.CustomTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:layout_marginTop="@dimen/_2sdp"
                                         android:text="@string/lbl_videos"
-                                        android:textColor="@color/white"
+                                        android:layout_marginTop="@dimen/_4sdp"
+                                        app:fontTextStyle="3"
+                                        android:textColor="@color/input_inactive"
                                         android:textSize="@dimen/_8ssp" />
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_width="@dimen/_60sdp"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/_8sdp"
                                     android:layout_marginTop="@dimen/_16sdp"
                                     android:orientation="vertical">
 
                                     <RelativeLayout
-                                        android:layout_width="@dimen/_36sdp"
-                                        android:layout_height="@dimen/_36sdp"
+                                        android:layout_width="@dimen/_46sdp"
+                                        android:layout_height="@dimen/_46sdp"
                                         android:layout_gravity="center_horizontal"
                                         android:background="@drawable/bg_circle_setup"
                                         android:elevation="@dimen/_2sdp"
                                         android:enabled="false">
 
                                         <ImageView
-                                            android:layout_width="@dimen/_16sdp"
-                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_width="@dimen/_24sdp"
+                                            android:layout_height="@dimen/_24sdp"
                                             android:layout_centerInParent="true"
                                             android:src="@drawable/ic_tips_inactive" />
                                     </RelativeLayout>
 
-                                    <TextView
+                                    <com.egamez.org.widget.CustomTextView
                                         android:id="@+id/txtTipsAndTricks"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:layout_marginTop="@dimen/_4sdp"
                                         android:text="@string/lbl_tips"
-                                        android:textColor="@color/white"
+                                        app:fontTextStyle="3"
+                                        android:textColor="@color/input_inactive"
                                         android:textSize="@dimen/_8ssp" />
                                 </LinearLayout>
 
@@ -436,7 +439,7 @@
                             tools:itemCount="1"
                             tools:listitem="@layout/allgamedata" />
 
-                        <TextView
+                        <com.egamez.org.widget.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_8ssp"
@@ -445,7 +448,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/white"
                             android:textSize="@dimen/_14ssp"
-                            android:textStyle="bold" />
+                            app:fontTextStyle="6"/>
 
                         <ImageView
                             android:layout_width="@dimen/_160sdp"

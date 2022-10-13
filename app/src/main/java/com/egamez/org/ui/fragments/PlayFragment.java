@@ -147,8 +147,10 @@ public class PlayFragment extends Fragment {
         txtTournamentTitle.setSelected(true);
         user = userLocalStore.getLoggedInUser();
         if(user !=null){
-            usernameText.setText(user.getUsername());
-            balanceText.setText("0");
+//            usernameText.setText(user.getUsername());
+//            balanceText.setText("0");
+            usernameText.setText("Priyansh Rajput");
+            balanceText.setText("50000");
         }
         profileLayout = (LinearLayout) root.findViewById(R.id.profile_layout);
         friendImage = (ImageView)root.findViewById(R.id.friend_image);
@@ -245,7 +247,7 @@ public class PlayFragment extends Fragment {
                 TextView lbl = ((TextView)root.findViewById(R.id.lblHowToPlay));
                 ImageView iv = ((ImageView)root.findViewById(R.id.ivHowToPlay));
                 RelativeLayout rvPlay = ((RelativeLayout)root.findViewById(R.id.rvPlay));
-                lbl.setTextColor(ContextCompat.getColor(getContext(), R.color.white));
+                lbl.setTextColor(ContextCompat.getColor(getContext(), R.color.input_inactive));
                 lbl.setTypeface(lbl.getTypeface(), Typeface.NORMAL);
                 iv.setImageResource(R.drawable.ic_play_inactive);
                 rvPlay.setBackgroundResource(R.drawable.bg_circle_setup);
@@ -352,6 +354,8 @@ public class PlayFragment extends Fragment {
         String url = getResources().getString(R.string.api) + "all_game";
         final UserLocalStore userLocalStore = new UserLocalStore(getContext());
 
+        setDummyData();
+
         final JsonObjectRequest request = new JsonObjectRequest(GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -366,6 +370,7 @@ public class PlayFragment extends Fragment {
                             }
                             JSON_PARSE_DATA_AFTER_WEBCALL(arr);
                         } catch (JSONException e) {
+                            setDummyData();
                             e.printStackTrace();
                         }
                         loadingDialog.dismiss();
@@ -430,6 +435,16 @@ public class PlayFragment extends Fragment {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+        }
+        allGamesAdapter.addAll(allGamesList);
+    }
+
+    String[] strAr1=new String[] {"PUBG", "POKEMON GO", "BANG BANG", "SUBWAY SURFERS", "PUBG", "POKEMON GO", "BANG BANG", "SUBWAY SURFERS"};
+
+    public void setDummyData() {
+        for (int i = 0; i < 5; i++) {
+            final GameData data = new GameData("game_id", strAr1[i], "game_image", "status", ""+(i+1));
+            allGamesList.add(data);
         }
         allGamesAdapter.addAll(allGamesList);
     }
