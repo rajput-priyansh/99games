@@ -17,7 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.gms.ads.AdListener;
@@ -59,10 +61,20 @@ public class HomeActivity extends AppCompatActivity {
             R.drawable.user
     };
 
+    ImageView ivEar, ivGame, ivProfile;
+
+    NavHostFragment navHostFragment;
+    NavController navController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        if (navHostFragment != null) {
+            navController = navHostFragment.getNavController();
+        }
 
         SharedPreferences sp = getSharedPreferences("SMINFO", MODE_PRIVATE);
         if (TextUtils.equals(sp.getString("baner", "no"), "yes")) {
@@ -123,13 +135,65 @@ public class HomeActivity extends AppCompatActivity {
         editor1.apply();
 
 
-        CurvedBottomNavigationView cbn = findViewById(R.id.nav_view);
+        ivEar = findViewById(R.id.ivEar);
+        ivGame = findViewById(R.id.ivGame);
+        ivProfile = findViewById(R.id.ivProfile);
+
+        ivGame.setImageResource(R.drawable.ic_game_home_active);
+        ivEar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivGame.setImageResource(R.drawable.ic_game_home_inactive);
+
+                int px = (int) getResources().getDimension(R.dimen._12sdp);
+                ivProfile.setImageResource(R.drawable.ic_account_inactive);
+                ivProfile.setPadding(px, px, px, px);
+
+                ivEar.setImageResource(R.drawable.ic_earn_active);
+                ivEar.setPadding(0,0, 0, 0);
+
+                navController.navigate(R.id.navigation_earn);
+            }
+        });
+
+        ivGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivGame.setImageResource(R.drawable.ic_game_home_active);
+
+                int px = (int) getResources().getDimension(R.dimen._12sdp);
+                ivProfile.setImageResource(R.drawable.ic_account_inactive);
+                ivProfile.setPadding(px, px, px, px);
+
+                ivEar.setImageResource(R.drawable.ic_earn_inactive);
+                ivEar.setPadding(px, px, px, px);
+
+                navController.navigate(R.id.navigation_game);
+
+            }
+        });
+
+        ivProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivGame.setImageResource(R.drawable.ic_game_home_inactive);
+                int px = (int) getResources().getDimension(R.dimen._12sdp);
+                ivProfile.setImageResource(R.drawable.ic_account_active);
+                ivProfile.setPadding(0,0, 0, 0);
+
+                ivEar.setImageResource(R.drawable.ic_earn_inactive);
+                ivEar.setPadding(px, px, px, px);
+
+                navController.navigate(R.id.navigation_account);
+            }
+        });
+        /*CurvedBottomNavigationView cbn = findViewById(R.id.nav_view);
         CbnMenuItem ernTab = new CbnMenuItem(R.drawable.coin_simple_vector, R.drawable.avd_home_coin, R.id.navigation_earn);
         CbnMenuItem gameTab = new CbnMenuItem(R.drawable.joystick_simple_vector, R.drawable.avd_home_joystick, R.id.navigation_game);
         CbnMenuItem accountTab = new CbnMenuItem(R.drawable.profile_simple_vector, R.drawable.avd_home_profile, R.id.navigation_account);
         CbnMenuItem[] navigation_items = {ernTab, gameTab, accountTab};
         cbn.setMenuItems(navigation_items, 1);
-        cbn.setupWithNavController(Navigation.findNavController(this, R.id.nav_host_fragment));
+        cbn.setupWithNavController(Navigation.findNavController(this, R.id.nav_host_fragment));*/
 
 
         /*viewPager.setAdapter(sectionsPagerAdapter);

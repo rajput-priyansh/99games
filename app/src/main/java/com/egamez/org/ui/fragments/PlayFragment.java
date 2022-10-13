@@ -4,6 +4,7 @@ package com.egamez.org.ui.fragments;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -93,7 +95,8 @@ public class PlayFragment extends Fragment {
     List<String> announList =new ArrayList<>();
     SwipeRefreshLayout pullToRefresh;
     TextView announcement, txtTipsAndTricks, txtTournamentTitle;
-    CardView announcecv, cvHowToPlay;
+    CardView announcecv;
+    LinearLayout cvHowToPlay;
     RecyclerView rvYoutubeLinks;
     ImageView imgCloseYoutubeLinkDialog,friendImage,notificationImage,staticsImage;
     RelativeLayout rlTutorialListDialogOverlay;
@@ -144,8 +147,8 @@ public class PlayFragment extends Fragment {
         txtTournamentTitle.setSelected(true);
         user = userLocalStore.getLoggedInUser();
         if(user !=null){
-            usernameText.setText("Username:"+user.getUsername());
-            balanceText.setText("Balance:0");
+            usernameText.setText(user.getUsername());
+            balanceText.setText("0");
         }
         profileLayout = (LinearLayout) root.findViewById(R.id.profile_layout);
         friendImage = (ImageView)root.findViewById(R.id.friend_image);
@@ -172,7 +175,7 @@ public class PlayFragment extends Fragment {
         rvYoutubeLinks.setLayoutManager(new LinearLayoutManager(getActivity()));
         imgCloseYoutubeLinkDialog = (ImageView) root.findViewById(R.id.imgCloseYoutubeLinkDialog);
         rlTutorialListDialogOverlay = (RelativeLayout) root.findViewById(R.id.rlTutorialListDialogOverlay);
-        cvHowToPlay = (CardView) root.findViewById(R.id.cvHowToPlay);
+        cvHowToPlay = (LinearLayout) root.findViewById(R.id.cvHowToPlay);
         friendImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -223,6 +226,15 @@ public class PlayFragment extends Fragment {
         cvHowToPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (getContext() != null) {
+                    TextView lbl = ((TextView)root.findViewById(R.id.lblHowToPlay));
+                    ImageView iv = ((ImageView)root.findViewById(R.id.ivHowToPlay));
+                    RelativeLayout rvPlay = ((RelativeLayout)root.findViewById(R.id.rvPlay));
+                    lbl.setTextColor(ContextCompat.getColor(getContext(), R.color.input_active));
+                    lbl.setTypeface(lbl.getTypeface(), Typeface.BOLD);
+                    iv.setImageResource(R.drawable.ic_play_active);
+                    rvPlay.setBackgroundResource(R.drawable.bg_circle_active_border);
+                }
                 rlTutorialListDialogOverlay.setVisibility(View.VISIBLE);
             }
         });
@@ -230,6 +242,13 @@ public class PlayFragment extends Fragment {
         imgCloseYoutubeLinkDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                TextView lbl = ((TextView)root.findViewById(R.id.lblHowToPlay));
+                ImageView iv = ((ImageView)root.findViewById(R.id.ivHowToPlay));
+                RelativeLayout rvPlay = ((RelativeLayout)root.findViewById(R.id.rvPlay));
+                lbl.setTextColor(ContextCompat.getColor(getContext(), R.color.white));
+                lbl.setTypeface(lbl.getTypeface(), Typeface.NORMAL);
+                iv.setImageResource(R.drawable.ic_play_inactive);
+                rvPlay.setBackgroundResource(R.drawable.bg_circle_setup);
                 rlTutorialListDialogOverlay.setVisibility(View.GONE);
             }
         });

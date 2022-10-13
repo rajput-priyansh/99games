@@ -504,6 +504,7 @@ public class CreateNewAccount extends AppCompatActivity implements CountryCodeIt
                                 Toast.makeText(CreateNewAccount.this, message, Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
+                            loadingDialog.dismiss();
                             e.printStackTrace();
                         }
                     }
@@ -549,6 +550,7 @@ public class CreateNewAccount extends AppCompatActivity implements CountryCodeIt
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                loadingDialog.dismiss();
                 Log.e("**VolleyError", "error" + error.getMessage());
             }
         }) {

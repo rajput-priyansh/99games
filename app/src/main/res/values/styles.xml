@@ -166,4 +166,11 @@
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
+    <style name="roundedImageView8dp" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">@dimen/_8sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_8sdp</item>
+        <item name="cornerSize">@dimen/_8sdp</item>
+    </style>
+
 </resources>

@@ -56,14 +56,52 @@
                 app:defaultNavHost="true"
                 app:navGraph="@navigation/mobile_navigation" />
 
-            <np.com.susanthapa.curved_bottom_navigation.CurvedBottomNavigationView
+            <!--<np.com.susanthapa.curved_bottom_navigation.CurvedBottomNavigationView
                 android:id="@+id/nav_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:background="@android:color/transparent"
                 app:cbn_bg="@color/colorPrimary"
-                app:cbn_unSelectedColor="@color/white" />
+                app:cbn_unSelectedColor="@color/white" />-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/ic_bottom_nav">
+
+                <ImageView
+                    android:id="@+id/ivEar"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:src="@drawable/ic_earn_inactive"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_36sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/ivGame"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_52sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_game_home_inactive"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginEnd="@dimen/_36sdp"
+                    android:src="@drawable/ic_account_inactive"
+                    android:padding="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </RelativeLayout>
 
         <LinearLayout

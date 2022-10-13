@@ -5,87 +5,142 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app_main_bg"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/newblue"
+        android:background="@drawable/ic_component_bg"
         android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingTop="5dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="5dp">
-        <TextView
-            android:layout_width="wrap_content"
+        android:padding="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:singleLine="true"
-            android:text="@string/app_name"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:layout_gravity="top"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/friend_image"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:src="@drawable/ic_profile_bg" />
+
+            <ImageView
+                android:id="@+id/statics_image"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/friend_image"
+                android:src="@drawable/ic_report_bg" />
+
+            <ImageView
+                android:layout_width="@dimen/_154sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_app_logo" />
+
+            <ImageView
+                android:id="@+id/notification_image"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:src="@drawable/ic_notification_bg" />
+
+        </RelativeLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
-        <LinearLayout
-            android:id="@+id/profile_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:scaleType="centerInside"
-                android:background="@drawable/white_round_corner"
-                android:paddingBottom="10dp"
-                android:src="@drawable/man" />
-            <View
-                android:layout_width="10dp"
-                android:layout_height="10dp"/>
-        </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/aspect_lib_margin_16dp"
-                android:layout_gravity="top"
-                android:layout_weight="1"
-                android:orientation="vertical">
-            <TextView
-                android:id="@+id/username_text"
+                android:id="@+id/profile_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="5dp"
-                android:gravity="center_vertical"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:singleLine="true"
-                android:text="Username: Demo"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                android:textStyle="normal" />
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="@dimen/_4sdp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/man" />
+
+                <TextView
+                    android:id="@+id/username_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    tools:text="Priyansh Rajput" />
+
+                <ImageView
+                    android:id="@+id/ivEdit"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:src="@drawable/ic_edit"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/resize_coin"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/balance_text"/>
 
                 <TextView
                     android:id="@+id/balance_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_centerVertical="true"
                     android:gravity="center_vertical"
                     android:singleLine="true"
-                    android:text="Balance: 0"
+                    android:text="0000"
+                    android:layout_toStartOf="@+id/ivPulse"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/white"
                     android:textStyle="normal" />
-            <androidx.cardview.widget.CardView
+
+                <ImageView
+                    android:id="@+id/ivPulse"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:src="@drawable/ic_pluse_bg"
+                    android:layout_gravity="end"
+                    android:layout_alignParentEnd="true"/>
+
+                <androidx.cardview.widget.CardView
                 android:id="@+id/balanceinplay"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
@@ -113,37 +168,11 @@
                     android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:orientation="horizontal">
-                <ImageView
-                    android:id="@+id/notification_image"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginRight="5dp"
-                    android:src="@drawable/ic_notifications_24" />
-                <ImageView
-                    android:id="@+id/friend_image"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginRight="5dp"
-                    android:src="@drawable/ic_group_24"/>
-                <ImageView
-                    android:id="@+id/statics_image"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="@dimen/aspect_lib_margin_4dp"
-                    android:src="@drawable/mystatics"
-                    app:tint="@color/white" />
-            </LinearLayout>
+
+            </RelativeLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
     <RelativeLayout
@@ -163,7 +192,8 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="10dp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/announce"
@@ -191,7 +221,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:paddingBottom="100dp">
+                        android:paddingBottom="@dimen/_80sdp">
 
                         <com.egamez.org.utils.KKViewPager
                             android:id="@+id/kk_pager"
@@ -210,207 +240,180 @@
                             android:scrollbars="none">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:visibility="visible">
 
-                                <androidx.cardview.widget.CardView
+                                <LinearLayout
                                     android:id="@+id/cvHowToPlay"
-                                    android:layout_width="80dp"
-                                    android:layout_height="80dp"
-                                    android:background="@color/white"
-                                    app:cardCornerRadius="5dp"
-                                    app:cardUseCompatPadding="true">
+                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_16sdp"
+                                    android:orientation="vertical">
 
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:orientation="vertical">
-
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:layout_gravity="center_horizontal"
-                                            android:layout_margin="5dp"
-                                            android:src="@drawable/tutorial" />
-
-                                        <com.egamez.org.widget.CustomTextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:gravity="center"
-                                            android:padding="3dp"
-                                            android:text="How to play?"
-                                            android:textColor="@color/black"
-                                            android:textSize="10sp"
-                                            app:fontTextStyle="3" />
-                                    </LinearLayout>
-                                </androidx.cardview.widget.CardView>
-
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="80dp"
-                                    android:layout_height="80dp"
-                                    android:background="@color/white"
-                                    app:cardCornerRadius="5dp"
-                                    app:cardUseCompatPadding="true">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:orientation="vertical">
+                                    <RelativeLayout
+                                        android:id="@+id/rvPlay"
+                                        android:layout_width="@dimen/_36sdp"
+                                        android:layout_height="@dimen/_36sdp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:background="@drawable/bg_circle_setup"
+                                        android:elevation="@dimen/_2sdp"
+                                        android:enabled="false">
 
                                         <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:layout_gravity="center_horizontal"
-                                            android:layout_margin="5dp"
-                                            android:src="@drawable/custom_room" />
+                                            android:id="@+id/ivHowToPlay"
+                                            android:layout_width="@dimen/_16sdp"
+                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_centerInParent="true"
+                                            android:src="@drawable/ic_play_inactive" />
+                                    </RelativeLayout>
 
-                                        <com.egamez.org.widget.CustomTextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:gravity="center"
-                                            android:padding="3dp"
-                                            android:text="Rooms"
-                                            android:textColor="@color/black"
-                                            android:textSize="10sp"
-                                            app:fontTextStyle="3" />
-                                    </LinearLayout>
-                                </androidx.cardview.widget.CardView>
+                                    <TextView
+                                        android:id="@+id/lblHowToPlay"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:gravity="center"
+                                        android:text="@string/lbl_how_to_play"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_8ssp" />
+                                </LinearLayout>
 
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="80dp"
-                                    android:layout_height="80dp"
-                                    android:background="@color/white"
-                                    app:cardCornerRadius="5dp"
-                                    app:cardUseCompatPadding="true">
+                                <LinearLayout
+                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_16sdp"
+                                    android:orientation="vertical">
 
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:orientation="vertical">
-
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:layout_gravity="center_horizontal"
-                                            android:layout_margin="5dp"
-                                            android:src="@drawable/tournament" />
-
-                                        <com.egamez.org.widget.CustomTextView
-                                            android:id="@+id/txtTournamentTitle"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:ellipsize="marquee"
-                                            android:gravity="center"
-                                            android:marqueeRepeatLimit="marquee_forever"
-                                            android:padding="3dp"
-                                            android:singleLine="true"
-                                            android:text="Tournaments"
-                                            android:textColor="@color/black"
-                                            android:textSize="10sp"
-                                            app:fontTextStyle="3" />
-                                    </LinearLayout>
-                                </androidx.cardview.widget.CardView>
-
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="80dp"
-                                    android:layout_height="80dp"
-                                    android:background="@color/white"
-                                    app:cardCornerRadius="5dp"
-                                    app:cardUseCompatPadding="true">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:orientation="vertical">
+                                    <RelativeLayout
+                                        android:layout_width="@dimen/_36sdp"
+                                        android:layout_height="@dimen/_36sdp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:background="@drawable/bg_circle_setup"
+                                        android:elevation="@dimen/_2sdp"
+                                        android:enabled="false">
 
                                         <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:layout_gravity="center_horizontal"
-                                            android:layout_margin="5dp"
-                                            android:src="@drawable/video" />
+                                            android:layout_width="@dimen/_16sdp"
+                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_centerInParent="true"
+                                            android:src="@drawable/ic_rooms_inactive" />
+                                    </RelativeLayout>
 
-                                        <com.egamez.org.widget.CustomTextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:gravity="center"
-                                            android:padding="3dp"
-                                            android:text="Videos"
-                                            android:textColor="@color/black"
-                                            android:textSize="10sp"
-                                            app:fontTextStyle="3" />
-                                    </LinearLayout>
-                                </androidx.cardview.widget.CardView>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:text="@string/lbl_rooms"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_8ssp" /><!--#bd77de-->
+                                </LinearLayout>
 
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="80dp"
-                                    android:layout_height="80dp"
-                                    android:background="@color/white"
-                                    app:cardCornerRadius="5dp"
-                                    app:cardUseCompatPadding="true">
+                                <LinearLayout
+                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_16sdp"
+                                    android:orientation="vertical">
 
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:orientation="vertical">
-
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:layout_gravity="center_horizontal"
-                                            android:layout_margin="5dp"
-                                            android:src="@drawable/tipsntricks" />
-
-                                        <com.egamez.org.widget.CustomTextView
-                                            android:id="@+id/txtTipsAndTricks"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:ellipsize="marquee"
-                                            android:gravity="center"
-                                            android:marqueeRepeatLimit="marquee_forever"
-                                            android:padding="3dp"
-                                            android:singleLine="true"
-                                            android:text="Tips and tricks"
-                                            android:textColor="@color/black"
-                                            android:textSize="10sp"
-                                            app:fontTextStyle="3" />
-                                    </LinearLayout>
-                                </androidx.cardview.widget.CardView>
-
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="80dp"
-                                    android:layout_height="80dp"
-                                    android:background="@color/white"
-                                    app:cardCornerRadius="5dp"
-                                    app:cardUseCompatPadding="true">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:orientation="vertical">
+                                    <RelativeLayout
+                                        android:layout_width="@dimen/_36sdp"
+                                        android:layout_height="@dimen/_36sdp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:background="@drawable/bg_circle_setup"
+                                        android:elevation="@dimen/_2sdp"
+                                        android:enabled="false">
 
                                         <ImageView
-                                            android:layout_width="40dp"
-                                            android:layout_height="40dp"
-                                            android:layout_gravity="center_horizontal"
-                                            android:layout_margin="5dp"
-                                            android:src="@drawable/gfx" />
+                                            android:layout_width="@dimen/_16sdp"
+                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_centerInParent="true"
+                                            android:src="@drawable/ic_tournament_inactive" />
+                                    </RelativeLayout>
 
-                                        <com.egamez.org.widget.CustomTextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:gravity="center"
-                                            android:padding="3dp"
-                                            android:text="GFX"
-                                            android:textColor="@color/black"
-                                            android:textSize="10sp"
-                                            app:fontTextStyle="3" />
-                                    </LinearLayout>
-                                </androidx.cardview.widget.CardView>
+                                    <TextView
+                                        android:id="@+id/txtTournamentTitle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:text="@string/lbl_tournament"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_8ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_16sdp"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="@dimen/_36sdp"
+                                        android:layout_height="@dimen/_36sdp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:background="@drawable/bg_circle_setup"
+                                        android:elevation="@dimen/_2sdp"
+                                        android:enabled="false">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_16sdp"
+                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_centerInParent="true"
+                                            android:src="@drawable/ic_video_inactive" />
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:text="@string/lbl_videos"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_8ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_16sdp"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="@dimen/_36sdp"
+                                        android:layout_height="@dimen/_36sdp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:background="@drawable/bg_circle_setup"
+                                        android:elevation="@dimen/_2sdp"
+                                        android:enabled="false">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_16sdp"
+                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_centerInParent="true"
+                                            android:src="@drawable/ic_tips_inactive" />
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/txtTipsAndTricks"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:text="@string/lbl_tips"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_8ssp" />
+                                </LinearLayout>
 
                             </LinearLayout>
+
                         </HorizontalScrollView>
 
                         <TextView
@@ -428,20 +431,37 @@
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/allgamell_recycler"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/allgamedata" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_8ssp"
+                            android:layout_marginTop="@dimen/_8sdp"
                             android:text="@string/announcements_text"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14ssp"
                             android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_160sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_line_sep" />
+
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/announcement_recycler"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            tools:itemCount="2"
+                            tools:listitem="@layout/announcement_item" />
 
                     </LinearLayout>
                 </androidx.core.widget.NestedScrollView>

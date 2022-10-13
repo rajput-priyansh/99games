@@ -448,4 +448,9 @@
     <string name="lbl_with_facebook">With Facebook</string>
     <string name="lbl_enter_name">ENTER NAME</string>
     <string name="lbl_enter_password">ENTER PASSWORD</string>
+    <string name="lbl_how_to_play">How To Play?</string>
+    <string name="lbl_rooms">Rooms</string>
+    <string name="lbl_tournament">Tournament</string>
+    <string name="lbl_videos">Videos</string>
+    <string name="lbl_tips">Tips</string>
 </resources>
