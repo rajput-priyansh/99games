@@ -149,7 +149,7 @@ public class PlayFragment extends Fragment {
         if(user !=null){
 //            usernameText.setText(user.getUsername());
 //            balanceText.setText("0");
-            usernameText.setText("Priyansh Rajput");
+            usernameText.setText("Jack Doe");
             balanceText.setText("50000");
         }
         profileLayout = (LinearLayout) root.findViewById(R.id.profile_layout);

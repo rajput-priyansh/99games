@@ -14,6 +14,9 @@
         <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/me_home.xml" value="0.10207700101317123" />
         <entry key="..\:/android_workspace/2021/my_local/99egamez/app/src/main/res/layout/play_home.xml" value="0.20018115942028986" />
         <entry key="app/src/main/res/drawable/_bg_circle_setup.xml" value="0.1815" />
+        <entry key="app/src/main/res/drawable/aboutus.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/aeroright.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/announcementfreen.xml" value="0.262" />
         <entry key="app/src/main/res/drawable/bg_annoucement_bottom_redious_card.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/bg_annoucement_card.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/bg_circle_active_border.xml" value="0.1815" />
@@ -23,17 +26,33 @@
         <entry key="app/src/main/res/drawable/bg_facebook_login.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_google_login.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_input_border.xml" value="0.1815" />
+        <entry key="app/src/main/res/drawable/bg_input_without_border.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/bg_rounded_yellow_border_radious.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/bg_slanted.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/bg_slanted_light_yellow.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/button_bg_app.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/customersupport.xml" value="0.262" />
         <entry key="app/src/main/res/drawable/edittext_setup.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/gameicongreen.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/help.xml" value="0.262" />
         <entry key="app/src/main/res/drawable/ic_edit.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/ic_iconeye.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/ic_yellow_sclan.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/input_bg_off_white.xml" value="0.1815" />
+        <entry key="app/src/main/res/drawable/leaderboard.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/logout.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/my_order_icon.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/myprofile.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/myreferrals.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/myreward_icon.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/mystatics.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/mywallet.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/notification_green_icon.xml" value="0.262" />
         <entry key="app/src/main/res/drawable/resize_coin.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/shareyellow.xml" value="0.262" />
         <entry key="app/src/main/res/drawable/signup_btn_border_bg.xml" value="0.1555" />
+        <entry key="app/src/main/res/drawable/termandconditon.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/topplayers.xml" value="0.262" />
         <entry key="app/src/main/res/layout/activity_aboutus.xml" value="0.2828125" />
         <entry key="app/src/main/res/layout/activity_app_update.xml" value="0.2828125" />
         <entry key="app/src/main/res/layout/activity_create_new_account.xml" value="0.2828125" />
@@ -43,7 +62,9 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2828125" />
         <entry key="app/src/main/res/layout/allgamedata.xml" value="0.375" />
         <entry key="app/src/main/res/layout/announcement_item.xml" value="0.2828125" />
+        <entry key="app/src/main/res/layout/baner_layout.xml" value="0.29791666666666666" />
         <entry key="app/src/main/res/layout/earn_home.xml" value="0.29791666666666666" />
+        <entry key="app/src/main/res/layout/me_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/play_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/resetpassword.xml" value="0.2828125" />
         <entry key="app/src/main/res/layout/test_sample.xml" value="0.2828125" />

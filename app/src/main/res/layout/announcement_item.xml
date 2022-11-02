@@ -78,6 +78,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="#6663ae"
                         android:textSize="@dimen/_10ssp"
+                        android:includeFontPadding="false"
                         android:textStyle="bold" />
                 </RelativeLayout>
                 <ImageView

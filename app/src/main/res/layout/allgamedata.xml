@@ -10,7 +10,8 @@
         android:id="@+id/gamecardview"
         android:layout_width="@dimen/_120sdp"
         android:layout_height="@dimen/_100sdp"
-        android:layout_margin="@dimen/_4sdp"
+        android:layout_marginVertical="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_6sdp"
         android:background="@drawable/bg_rounded_yellow_border_radious">
 
         <RelativeLayout
@@ -29,7 +30,7 @@
                 android:layout_marginTop="@dimen/_3sdp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_demo_pubg"
+                android:src="@drawable/ic_mask_group"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/roundedImageView4dp" />

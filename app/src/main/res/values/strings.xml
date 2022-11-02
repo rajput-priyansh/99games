@@ -453,4 +453,5 @@
     <string name="lbl_tournament">Tournament</string>
     <string name="lbl_videos">Videos</string>
     <string name="lbl_tips">Tips</string>
+    <string name="lbl_powered_by_metaclops">POWERED BY METACLOPS</string>
 </resources>

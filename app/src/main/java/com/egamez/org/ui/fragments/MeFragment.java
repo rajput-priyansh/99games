@@ -28,6 +28,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.egamez.org.widget.CustomTextView;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -62,7 +63,7 @@ import java.util.Map;
 
 public class MeFragment extends Fragment {
 
-    TextView userName;
+    CustomTextView userName;
     TextView playCoin;
     TextView myWallet;
     TextView myProfile;
@@ -111,8 +112,8 @@ public class MeFragment extends Fragment {
         }
         View root = inflater.inflate(R.layout.me_home, container, false);
 
-        userName = (TextView) root.findViewById(R.id.username);
-        playCoin = (TextView) root.findViewById(R.id.playcoin);
+//        userName = (CustomTextView) root.findViewById(R.id.username_text);
+//        playCoin = (TextView) root.findViewById(R.id.playcoin);
         myWallet = (TextView) root.findViewById(R.id.mywallet);
         myProfile = (TextView) root.findViewById(R.id.myprofile);
         aboutUs = (TextView) root.findViewById(R.id.aboutus);
@@ -127,17 +128,17 @@ public class MeFragment extends Fragment {
         myRewards = (TextView) root.findViewById(R.id.myreward);
         leaderboard = (TextView) root.findViewById(R.id.leaderboard);
         termAndCondition = (TextView) root.findViewById(R.id.tandc);
-        staticResult = (LinearLayout) root.findViewById(R.id.staticsresult);
-        matchesPlayed = (TextView) root.findViewById(R.id.matchesplayed);
-        totalKilled = (TextView) root.findViewById(R.id.totalkilled);
-        amountWon = (TextView) root.findViewById(R.id.amountwon);
-        appVersion = (TextView) root.findViewById(R.id.appversion);
+//        staticResult = (LinearLayout) root.findViewById(R.id.staticsresult);
+//        matchesPlayed = (TextView) root.findViewById(R.id.matchesplayed);
+//        totalKilled = (TextView) root.findViewById(R.id.totalkilled);
+//        amountWon = (TextView) root.findViewById(R.id.amountwon);
+//        appVersion = (TextView) root.findViewById(R.id.appversion);
         mymatches = (TextView) root.findViewById(R.id.mymatch);
         myOrder = (TextView) root.findViewById(R.id.myorder);
         announcetv = (TextView) root.findViewById(R.id.announcetv);
         pushtext = (TextView) root.findViewById(R.id.pushtext);
-        imgUserProfile = (ImageView) root.findViewById(R.id.imgUserProfile);
-        imgShareProfile = (ImageView) root.findViewById(R.id.imgShareProfile);
+//        imgUserProfile = (ImageView) root.findViewById(R.id.imgUserProfile);
+//        imgShareProfile = (ImageView) root.findViewById(R.id.imgShareProfile);
 
         notification = (Switch) root.findViewById(R.id.notification);
 
@@ -159,7 +160,7 @@ public class MeFragment extends Fragment {
             }
         });
 
-        imgShareProfile.setOnClickListener(new View.OnClickListener() {
+        /*imgShareProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (msg != null && !msg.equals("")) {
@@ -170,7 +171,7 @@ public class MeFragment extends Fragment {
                     startActivity(Intent.createChooser(intent, "Share"));
                 }
             }
-        });
+        });*/
 
         notification.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -201,7 +202,7 @@ public class MeFragment extends Fragment {
         }
         String url = getResources().getString(R.string.api) + "dashboard/" + user.getMemberid();
 
-        final JsonObjectRequest request = new JsonObjectRequest(url, null,
+        /*final JsonObjectRequest request = new JsonObjectRequest(url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -289,7 +290,7 @@ public class MeFragment extends Fragment {
             }
         };
         request.setShouldCache(false);
-        mQueue.add(request);
+        mQueue.add(request);*/
         //dashboard api call end
 
         mymatches.setOnClickListener(new View.OnClickListener() {
@@ -312,12 +313,12 @@ public class MeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        staticResult.setOnClickListener(new View.OnClickListener() {
+        /*staticResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), MyStatisticsActivity.class));
             }
-        });
+        });*/
 
         myWallet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -421,17 +422,18 @@ public class MeFragment extends Fragment {
         JsonObjectRequest vrequest = new JsonObjectRequest(Request.Method.GET, vurl, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                try {
+                /*try {
                     appVersion.setText(getActivity().getResources().getString(R.string.version) + " : " + response.getString("version"));
                 } catch (JSONException e) {
                     e.printStackTrace();
-                }
+                }*/
                 loadingDialog.dismiss();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("error", error.toString());
+                loadingDialog.dismiss();
             }
         });
 

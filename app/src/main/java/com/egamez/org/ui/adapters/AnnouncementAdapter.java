@@ -67,7 +67,8 @@ public class AnnouncementAdapter extends RecyclerView.Adapter<AnnouncementAdapte
 
     @Override
     public void onBindViewHolder(DataObjectHolder holder, int position) {
-        String url = "https://metaclops.in//uploads/game_image/thumb/1000x500_202108171945131676618913__ludo.jpg";
+//        String url = "https://metaclops.in//uploads/game_image/thumb/1000x500_202108171945131676618913__ludo.jpg";
+        String url = "https://metaclops.in//uploads/announcements/sample-announcement.png";
         Picasso.get().load(url).placeholder(R.drawable.refer_and_earn).fit().into(holder.gameImageView);
     }
 
